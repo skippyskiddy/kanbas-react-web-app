@@ -3,6 +3,19 @@
     <title>Lab 1</title>
   </head>
   <body>
+
+    <h1>Welcome to Web Development!</h1>
+    <ul>
+      <li><a href="/labs/a1/index.html">Assignment 1</a></li>
+      <li><a href="/labs/a2/index.html">Assignment 2</a></li>
+      <li><a href="/labs/a3/index.html">Assignment 3</a></li>
+      <li><a href="/Kanbas/Courses/Home/screen.html">Kanbas</a></li>
+    </ul>
+    <!--
+      <noscript>You need to enable JavaScript to run this app.</noscript>
+      <div id="root"></div>
+    -->
+
     <h1>HTML Examples</h1>
     <h2>Heading Tags</h2>
     Text documents are often broken up into 
@@ -121,7 +134,26 @@ Loading a local image:<br/>
    <label for="text-fields-last-name">Last name:</label>
    <input type="text" id="text-fields-last-name"
           placeholder="Doe" value="Wonderland"/>
-   <!-- copy rest of form elements here -->
+          <h2>Other HTML field types</h2>
+          <label for="text-fields-email"> Email: </label>
+          <input type="email"
+                placeholder="jdoe@somewhere.com"
+                id="text-fields-email"/><br/>
+          <label for="text-fields-salary-start"> Starting salary:
+          </label>
+          <input type="number"
+                id="text-fields-salary-start"
+                placeholder="1000"
+                value="100000"/><br/>
+          <label for="text-fields-rating"> Rating: </label>
+          <input type="range" id="text-fields-rating"
+                placeholder="Doe"
+                max="5"
+                value="4"/><br/>
+          <label for="text-fields-dob"> Date of birth: </label>
+          <input type="date"
+                id="text-fields-dob"
+                value="2000-01-21"/><br/>  
 </form>
 
     
@@ -134,6 +166,77 @@ Loading a local image:<br/>
 
 <h3>Buttons</h3>
 <button type="button">Click me!</button>
+
+<h2>File upload</h2>
+<input type="file"/>
+
+<h2>Radio buttons</h2>
+
+<label>Favorite movie genre:</label><br/>
+
+<input type="radio" value="COMEDY"
+      name="radio-genre" id="radio-comedy"/>
+<label for="radio-comedy">Comedy</label><br/>
+<input type="radio" value="DRAMA"
+      name="radio-genre" id="radio-drama"/>
+<label for="radio-drama">Drama</label><br/>
+<input type="radio" value="SCIFI"
+      name="radio-genre" id="radio-scifi" checked/>
+<label for="radio-scifi">Science Fiction</label><br/>
+<input type="radio" value="FANTASY"
+      name="radio-genre" id="radio-fantasy"/>
+<label for="radio-fantasy">Fantasy</label>
+
+<h2>Checkboxes</h2>
+<label>Favorite movie genre:</label>
+<br/>
+<input type="checkbox" value="COMEDY"
+      name="check-genre" id="chkbox-comedy" checked/>
+<label for="chkbox-comedy">Comedy</label>    <br/>
+
+<input type="checkbox" value="DRAMA"
+      name="check-genre" id="chkbox-drama"/>
+<label for="chkbox-drama">Drama</label>    <br/>
+
+<input type="checkbox" value="SCIFI"
+      name="check-genre" id="chkbox-scifi" checked/>
+<label for="chkbox-scifi">Science Fiction</label> <br/>
+
+<input type="checkbox" value="FANTASY"
+      name="check-genre" id="chkbox-fantasy"/>
+<label for="chkbox-fantasy">Fantasy</label>
+
+
+<h2>Dropdowns</h2>
+
+<h3>Select one</h3>
+<label for="select-one-genre"> Favorite movie genre: </label><br/>
+<select id="select-one-genre">
+   <option value="COMEDY">Comedy</option>
+   <option value="DRAMA">Drama</option>
+   <option selected value="SCIFI">
+       Science Fiction</option>
+   <option value="FANTASY">Fantasy</option>
+</select>
+
+<h3>Select many</h3>
+<label for="select-many-genre"> Favorite movie genres: </label><br/>
+<select id="select-many-genre" multiple>
+   <option selected value="COMEDY">Comedy</option>
+   <option value="DRAMA">Drama</option>
+   <option selected value="SCIFI">
+       Science Fiction</option>
+   <option value="FANTASY">Fantasy</option>
+</select>
+
+<h2>Anchor tag</h2>
+
+Please
+<a href="https://www.lipsum.com">click here</a>
+to get dummy text<br/>
+
+Checkout my <a href="other-page.html">other page</a>
+
 </body>
 </html>
 
