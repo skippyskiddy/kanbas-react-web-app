@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!-- I have prior experience with HTML/JS so I'm going to use iframe for ease -->
+<head>
+    <meta charset="UTF-8">
+    <title>Kanbas Combined Home Screen</title>
+    <style>
+        iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <table width="100%">
+        <tr>
+            <!-- Kanbas Sidebar -->
+            <td valign="top" width="20%">
+                <iframe src="../../Navigation/index.html"></iframe>
+            </td>
+
+            <!-- Course Nav Sidebar -->
+            <td valign="top" width="20%">
+                <iframe src="../Navigation/index.html"></iframe>
+            </td>
+
+            <!-- Home -->
+            <td valign="top" width="60%">
+                <iframe src="index.html"></iframe>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
