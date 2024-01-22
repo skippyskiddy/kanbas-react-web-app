@@ -4,61 +4,38 @@
     <meta charset="UTF-8">
     <title>Edit Profile Page</title>
     <style>
-        body {
+       body {
             font-family: Arial, sans-serif;
             margin: 20px;
         }
-        .form-section {
-            margin-bottom: 20px;
+        h1, h2, .link-title, .link-url {
+            clear: both;
         }
-        h1, h2 {
-            margin-bottom: 10px;
-        }
-        textarea, select {
-            margin-bottom: 10px;
-            padding: 8px;
-            font-size: 14px;
-            width: 15%; 
-        }
-        textarea {
-            width: 50%; 
-        }
-        .link-fields, .link-fields {
+        .link-fields {
             display: flex;
-            gap: 5px;
-            flex-direction: row;
-            align-items: flex-start; 
+            align-items: center;
+            gap: 10px;
         }
-        .link-fields h5 {
-            margin-left: 80px; 
+        .link-fields label,
+        .link-fields input[type="text"],
+        input[type="text"], select, .actions button {
+            padding: 5px;
+            font-size: 14px;
         }
         .actions {
             margin-top: 20px;
         }
-
-        .titlebox { 
-            display:block;
-        }
-        .external-link, .remove-link {
-            color: blue;
-            text-decoration: underline;
+        .actions button {
+            margin-right: 10px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
             cursor: pointer;
         }
-        .remove-link {
-            color: red; 
-            margin-top: 10px;
+        .rightwards-arrow {
+            margin: 0 10px;
         }
-        .name-input-field {
-            width: 15%;
-            margin-bottom: 10px;
-            padding: 8px;
-            font-size: 14px;
-        }
-        .input-field {
-            width: 75%;
-            margin-bottom: 10px;
-            padding: 8px;
-            font-size: 14px;
+        textarea {
+            width: 50%;
         }
     </style>
 </head>
@@ -77,8 +54,12 @@
             </select>
         </div>
 
+        <br/>
+        <label>Title:</label>
+        <input class="name-input-field" type="text" name="title">
+
         <h2>Contact</h2>
-        <p>No registered services, you can add some on the <a href="settings/page.html" class="external-link">settings page</a>.</p>
+        <p>No registered services, you can add some on the <a href="#" class="external-link">settings page</a>.</p>
 
         <h2>Biography</h2>
         <p>Faculty, Software Engineer, AI, Space, and renewables enthusiast.</p> <!-- Static text above input -->

@@ -4,7 +4,6 @@
     <title>Kanbas Account Combined</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
             margin: 20px;
         }
         .divider {
@@ -23,39 +22,22 @@
             top: 10px; 
             
         }
-        h1, h2, .link-title, .link-url {
+        h1, h2 {
             clear: both;
         }
-        .field-container, .link-fields {
+        .field-container {
             display: flex;
             align-items: center;
             gap: 10px;
         }
-        .field-container label, .link-fields label,
-        .field-container input[type="text"], .link-fields input[type="text"],
+        .field-container label,
+        .field-container input[type="text"],
         .field-container select {
             margin: 0;
         }
-        input[type="text"], select, .link-remove, .actions button {
+        input[type="text"], select {
             padding: 5px;
             font-size: 14px;
-        }
-        .link-remove {
-            color: blue;
-            cursor: pointer;
-            text-decoration: underline;
-        }
-        .actions {
-            margin-top: 20px;
-        }
-        .actions button {
-            margin-right: 10px;
-            background-color: #f0f0f0;
-            border: 1px solid #ccc;
-            cursor: pointer;
-        }
-        .rightwards-arrow {
-            margin: 0 10px;
         }
     </style>
 </head>
@@ -77,27 +59,19 @@
                 </ul>
             </td>
 
-            <!-- Course Navigation -->
+            <!-- Account Navigation -->
             <td valign="top">
                 <ul>
-                    <li><a href="../../Courses/Home/screen.html">Home</a></li>
-                    <li><a href="#">Modules</a></li>
-                    <li><a href="#">Piazza</a></li>
-                    <li><a href="../../Courses/Grades/screen.html">Grades</a></li>
-                    <li><a href="../../Courses/Assignments/screen.html">Assignments</a></li>
-                    <li><a href="#">Quizzes</a></li>
-                    <li><a href="#">People</a></li>
-                    <li><a href="#">Panopto Video</a></li>
-                    <li><a href="#">Discussion</a></li>
-                    <li><a href="#">Announcements</a></li>
-                    <li><a href="#">Pages</a></li>
+                    <li><a href="#">Notifications</a></li>
+                    <li><a href="screen.html">Profile</a></li>
                     <li><a href="#">Files</a></li>
-                    <li><a href="#">Rubrics</a></li>
-                    <li><a href="#">Outcomes</a></li>
-                    <li><a href="#">Collaborations</a></li>
-                    <li><a href="#">Syllabus</a></li>
-                    <li><a href="../../Settings/CourseDetails/screen.html">Settings</a></li>
-                </ul>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="#">ePortfolios</a></li>
+                    <li><a href="#">Shared Content</a></li>
+                    <li><a href="#">The Hub</a></li>
+                    <li><a href="#">Qwickly Course Tools</a></li>
+                    <li><a href="#">Global Announcements</a></li>
+                </ul>                
             </td>
 
             <!-- Content HERE -->
@@ -106,29 +80,13 @@
                 <div class="divider"></div>
                 <a href="Edit/screen.html" class="edit-profile">&#x270E; Edit Profile</a>
                 
-                <div class="field-container" style="margin-top: 40px;">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" value="Elif Tirkes">
-                    <label for="pronouns">Pronouns:</label>
-                    <select id="pronouns">
-                        <option value="">None</option>
-                        <option value="he/him">he/him</option>
-                        <option value="she/her">she/her</option>
-                        <option value="they/them">they/them</option>
-                    </select>
-                </div>
-                
-                <div class="field-container" style="margin-top: 20px;">
-                    <label for="title">Title:</label>
-                    <input type="text" id="title">
-                </div>
-            
+                <h1>Elif Tirkes</h1>
                 <h2>Contact</h2>
                 <p>No registered services, you can add some on the settings page</p>
                 <h2>Biography</h2>
                 <p>Faculty, Software Engineer, AI, Space, and renewables enthusiast.</p>
                 <h2>Links</h2>
-                <p><a href="#">Link to Youtube</a></p>
+                <p><a href="#">Youtube</a></p>
             
             </td>
         </tr>
