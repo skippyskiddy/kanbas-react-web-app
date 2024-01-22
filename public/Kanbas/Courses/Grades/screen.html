@@ -1,34 +1,192 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Kanbas Combined Grades Screen</title>
+    <title>Kanbas Course Grades Combined</title>
     <style>
-        iframe {
-            width: 100%;
-            height: 500px;
-            border: none;
+        body {
+            font-family: sans-serif;
+            color: black;
+            background-color: white;
+            margin: 10px;
+            padding: 0;
+        }
+        .header-section {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+        }
+        .header-section select, .header-section button {
+            margin-right: 5px;
+            margin-bottom: 5px;
         }
         table {
             width: 100%;
+            border-collapse: collapse;
+            table-layout: fixed;
+        }
+        th, td {
+            border: none;
+            padding: 2px;
+            font-size: 12px;
+        }
+        th {
+            font-weight: bold;
+            white-space: normal; 
+        }
+        .search-section {
+            margin-bottom: 10px;
+        }
+        .search-section input, .search-section button {
+            display: block;
+            margin-bottom: 10px;
+        }
+        .grade-input {
+            width: 25px;
+            font-size: 12px;
+            text-align: center;
+        }
+        .grades-table {
+            line-break: anywhere;
+        }
+
+        .grades-table th, .grades-table td {
+            border: 1px solid black;
+            text-align: center;
         }
     </style>
 </head>
 <body>
-    <table>
+    <table width="100%">
         <tr>
-            <!-- Kanbas Navigation Sidebar -->
-            <td valign="top" width="20%">
-                <iframe src="../../Navigation/index.html"></iframe>
+            <!-- Kanbas Navigation -->
+            <td valign="top" width="10%">
+                <ul>
+                    <li><a href="../../Account/Profile/screen.html">Account</a></li>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="../../Settings/CourseDetails/screen.html">Courses</a></li>
+                    <li><a href="#">Calendar</a></li>
+                    <li><a href="#">Inbox</a></li>
+                    <li><a href="#">History</a></li>
+                    <li><a href="#">Studio</a></li>
+                    <li><a href="#">Commons</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
             </td>
 
-            <!-- Course Navigation Sidebar -->
-            <td valign="top" width="20%">
-                <iframe src="../Navigation/index.html"></iframe>
+            <!-- Course Navigation -->
+            <td valign="top" width="10%">
+                <ul>
+                    <li><a href="../Home/screen.html">Home</a></li>
+                    <li><a href="#">Modules</a></li>
+                    <li><a href="#">Piazza</a></li>
+                    <li><a href="../Grades/screen.html">Grades</a></li>
+                    <li><a href="../Assignments/screen.html">Assignments</a></li>
+                    <li><a href="#">Quizzes</a></li>
+                    <li><a href="#">People</a></li>
+                    <li><a href="#">Panopto Video</a></li>
+                    <li><a href="#">Discussion</a></li>
+                    <li><a href="#">Announcements</a></li>
+                    <li><a href="#">Pages</a></li>
+                    <li><a href="#">Files</a></li>
+                    <li><a href="#">Rubrics</a></li>
+                    <li><a href="#">Outcomes</a></li>
+                    <li><a href="#">Collaborations</a></li>
+                    <li><a href="#">Syllabus</a></li>
+                    <li><a href="../../Settings/CourseDetails/screen.html">Settings</a></li>
+                </ul>
             </td>
 
-            <!-- Grades Screen -->
-            <td valign="top" width="60%">
-                <iframe src="index.html"></iframe>
+            <td valign="top">
+            <!-- Content HERE -->
+            <div class="header-section">
+                <select>
+                    <option>Gradebook</option>
+                </select>
+                <button>Import</button>
+                <select>
+                    <option>Export </option>
+                </select>
+                <button>Configure</button>
+            </div>
+        
+            <h3>Student Names</h3>
+            <div class="search-section">
+                <input type="text" placeholder="Search Students">
+            </div>
+        
+            <h3>Assignment Names</h3>
+            <div class="search-section">
+                <input type="text" placeholder="Search Assignments">
+                <button>Apply Filters</button> <!-- assume this will be JS?-->
+            </div>
+        
+            <table class="grades-table">
+                <tr>
+                    <th>Student Name</th>
+                    <th>A1 SETUP<br>Out of 100</th>
+                    <th>A2 HTML<br>Out of 100</th>
+                    <th>A3 CSS<br>Out of 100</th>
+                    <th>A4 BOOTSTRAP<br>Out of 100</th>
+                    <th>A5 JAVASCRIPT<br>Out of 100</th>
+                    <th>A6 REACT<br>Out of 100</th>
+                    <th>A7 REDUX<br>Out of 100</th>
+                    <th>A8 NODE<br>Out of 100</th>
+                    <th>A9 MONGO<br>Out of 100</th>
+                </tr>
+                <tbody>
+                    <tr>
+                        <td>Alice Wonderland</td>
+                        <td>90</td>
+                        <td>85</td>
+                        <td><input class="grade-input" type="text" value="85"></td>
+                        <td>93</td>
+                        <td>89</td>
+                        <td>87</td>
+                        <td>90</td>
+                        <td><input class="grade-input" type="text" value="76"></td>
+                        <td>91</td>
+                    </tr>
+                    <tr>
+                        <td>Luke Skywalker</td>
+                        <td>88</td>
+                        <td><input class="grade-input" type="text" value="92"></td>
+                        <td>80</td>
+                        <td>85</td>
+                        <td><input class="grade-input" type="text" value="80"></td>
+                        <td>84</td>
+                        <td>81</td>
+                        <td>83</td>
+                        <td>79</td>
+                    </tr>
+                    <tr>
+                        <td>Darth Vader</td>
+                        <td>75</td>
+                        <td>80</td>
+                        <td>70</td>
+                        <td>78</td>
+                        <td>74</td>
+                        <td>72</td>
+                        <td>76</td>
+                        <td>71</td>
+                        <td>73</td>
+                    </tr>
+                    <tr>
+                        <td>Jason Derulo</td>
+                        <td>75</td>
+                        <td>80</td>
+                        <td><input class="grade-input" type="text" value="70"></td>
+                        <td>78</td>
+                        <td>74</td>
+                        <td>72</td>
+                        <td><input class="grade-input" type="text" value="76"></td>
+                        <td>71</td>
+                        <td>73</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- END HERE-->
             </td>
         </tr>
     </table>
