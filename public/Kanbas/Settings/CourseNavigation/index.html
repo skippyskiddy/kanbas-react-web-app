@@ -4,7 +4,6 @@
     <title>Course Details Settings</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
             margin: 20px;
         }
         .tabs {
@@ -14,6 +13,7 @@
             overflow: hidden;
             border: 1px solid #ccc;
             background-color: #f1f1f1;
+            width: 60%;
         }
         .tabs li {
             float: left;
@@ -35,12 +35,13 @@
             background-color: #ccc;
         }
         .course-navigation {
-            border: 1px solid #ccc;
+            border: none;
             padding: 10px;
             margin-top: 20px;
+            width: 60%;
         }
         .course-navigation table {
-            width: 100%;
+            width: 60%;
             border-collapse: collapse;
         }
         .course-navigation th, .course-navigation td {
@@ -52,7 +53,7 @@
             font-style: italic;
         }
         .drag-text {
-            margin-top: 10px;
+            margin-top: 5px;
             font-size: 15px;
         }
         .drag-text h3 {
@@ -74,14 +75,17 @@
             font-style: italic;
             font-size: 11px; 
         }
+        .section-title {
+            font-size: 18px;
+        }
     </style>
 </head>
 <body>
 
     <ul class="tabs">
-        <li><a href="javascript:void(0)">Course Details</a></li>
+        <li><a href="../CourseDetails/screen.html">Course Details</a></li>
         <li><a href="javascript:void(0)">Sections</a></li>
-        <li><a href="javascript:void(0)" class="active">Navigation</a></li>
+        <li><a href="screen.html" class="active">Navigation</a></li>
         <li><a href="javascript:void(0)">Apps</a></li>
         <li><a href="javascript:void(0)">Feature Options</a></li>
         <li><a href="javascript:void(0)">Integrations</a></li>
@@ -102,7 +106,7 @@
     </table>
 
     <div class="drag-text">
-        <h4>Drag items here to hide them from students</h4>
+        <p class="section-title">Drag items here to hide them from students</p>
         <p>Disabling most pages will cause students who visit those pages to be redirected to the course home page</p>
     </div>
 

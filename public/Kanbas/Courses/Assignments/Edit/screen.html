@@ -1,36 +1,203 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Kanbas Combined Assignment Edit Screen</title>
+    <title>Kanbas Course Grades Combined</title>
     <style>
-        iframe {
-            width: 100%;
-            height: 100vh;
-            border: none;
+        body {
+            margin: 20px;
         }
-        table {
+        .container {
+            max-width: 400px; 
+            margin-left: 20px;
+            text-align: left;
+        }
+        label, .container p {
+            margin: 10px 0 5px;
+            font-size: 14px; 
+        }
+        input[type="text"], input[type="date"], textarea, select {
+            margin-bottom: 10px; 
             width: 100%;
+            box-sizing: border-box;
+            font-size: 14px; 
+        }
+        select {
+            width: auto; 
+            display: block; 
+        }
+        .form-action-buttons {
+            display: flex;
+            justify-content: start;
+            gap: 10px;
+            margin-top: 10px; 
+        }
+        .divider {
+            border-bottom: 1px solid #ccc;
+            margin: 10px 0; 
+        }
+        .checkbox-group {
+            display: block; 
+        }
+        .checkbox-group div {
+            display: flex;
+            align-items: center; 
+            margin-bottom: 5px; 
+        }
+        .checkbox-group input[type="checkbox"] {
+            margin-right: 5px; 
         }
     </style>
 </head>
 <body>
-    <table>
+    <table width="100%">
         <tr>
-            <!-- Kanbas Navigation Sidebar -->
-            <td valign="top" width="20%">
-                <iframe src="../../../Navigation/index.html"></iframe>
+            <!-- Kanbas Navigation -->
+            <td valign="top">
+                <ul>
+                    <li><a href="../../../Account/Profile/screen.html">Account</a></li>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="../../../Settings/CourseDetails/screen.html">Courses</a></li>
+                    <li><a href="#">Calendar</a></li>
+                    <li><a href="#">Inbox</a></li>
+                    <li><a href="#">History</a></li>
+                    <li><a href="#">Studio</a></li>
+                    <li><a href="#">Commons</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
             </td>
 
-            <!-- Course Navigation Sidebar -->
-            <td valign="top" width="20%">
-                <iframe src="../../Navigation/index.html"></iframe>
+            <!-- Course Navigation -->
+            <td valign="top">
+                <ul>
+                    <li><a href="../../Home/screen.html">Home</a></li>
+                    <li><a href="#">Modules</a></li>
+                    <li><a href="#">Piazza</a></li>
+                    <li><a href="../../Grades/screen.html">Grades</a></li>
+                    <li><a href="../../Assignments/screen.html">Assignments</a></li>
+                    <li><a href="#">Quizzes</a></li>
+                    <li><a href="#">People</a></li>
+                    <li><a href="#">Panopto Video</a></li>
+                    <li><a href="#">Discussion</a></li>
+                    <li><a href="#">Announcements</a></li>
+                    <li><a href="#">Pages</a></li>
+                    <li><a href="#">Files</a></li>
+                    <li><a href="#">Rubrics</a></li>
+                    <li><a href="#">Outcomes</a></li>
+                    <li><a href="#">Collaborations</a></li>
+                    <li><a href="#">Syllabus</a></li>
+                    <li><a href="../../../Settings/CourseDetails/screen.html">Settings</a></li>
+                </ul>
             </td>
 
-            <!-- Edit Screen -->
-            <td valign="top" width="60%">
-                <iframe src="index.html"></iframe>
+            <!-- Content HERE -->
+            <td valign="top">
+                <div class="container">
+                    <select id="actionDropdown">
+                        <option>Speed Grader</option>
+                        <option>Edit</option>
+                        <option>Duplicate</option>
+                        <option>Delete</option>
+                        <option>Move To..</option>
+                        <option>Send To…</option>
+                        <option>Copy To…</option>
+                        <option>Share to Commons</option>
+                    </select>
+                    <div class="divider"></div>
+            
+                    <h3>Assignment Name </h3>
+                    <input type="text" id="assignmentName" value="Assignment Name">
+            
+                    <label for="assignmentDescription">Description</label>
+                    <textarea id="assignmentDescription" rows="2" cols="50">This is the assignment description</textarea>
+            
+                    <label for="points">Points</label>
+                    <input type="text" id="points" value="100">
+            
+                    <label for="assignmentGroup">Assignment Group</label>
+                    <select id="assignmentGroup">
+                        <option>ASSIGNMENTS</option>
+                    </select>
+            
+                    <label for="displayGrade">Display Grade As</label>
+                    <select id="displayGrade">
+                        <option>Percentage</option>
+                    </select>
+            
+                    <label for="submissionType">Submission Type</label>
+                    <select id="submissionType">
+                        <option>Online</option>
+                    </select>
+            
+                    <p>Online entry options</p>
+                    <div class="checkbox-group">
+                        <div>
+                            <input type="checkbox" id="textEntry" name="entryOption">
+                            <label for="textEntry">Text entry</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="websiteURL" name="entryOption">
+                            <label for="websiteURL">Website URL</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="mediaRecordings" name="entryOption">
+                            <label for="mediaRecordings">Media Recordings</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="studentAnnotation" name="entryOption">
+                            <label for="studentAnnotation">Student annotation</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="fileUploads" name="entryOption">
+                            <label for="fileUploads">File uploads</label>
+                        </div>
+                    </div>
+            
+                    <label for="assignTo">Assign to</label>
+                    <input type="text" id="assignTo" value="Everyone">
+            
+                    <label for="dueDate">Due</label>
+                    <input type="date" id="dueDate">
+            
+                    <label for="availableFrom">Available from</label>
+                    <input type="date" id="availableFrom">
+            
+                    <label for="untilDate">Until</label>
+                    <input type="date" id="untilDate">
+            
+                    <div class="form-action-buttons">
+                        <a href="../screen.html" style="text-decoration: none;">
+                            <button type="button">Cancel</button>
+                        </a>
+                        <a href="../screen.html" style="text-decoration: none;">
+                            <button type="button">Save</button>
+                        </a>
+                    </div>
+                </div>
+            
+                <script>
+                    //not sure if we are supposed to use JS to do this 
+                    //but based on the screenshots, I need to use JS to make sure the name inpout box is 
+                    //filled when clicked 
+                    window.onload = function() {
+                        // Default regex function to get query parameters by name
+                        function getQueryParam(name) {
+                            name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+                            var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+                            var results = regex.exec(location.search);
+                            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+                        }
+                
+                        // Update the Assignment Name field if the assignmentName exists 
+                        var assignmentName = getQueryParam('assignmentName');
+                        if (assignmentName) {
+                            document.getElementById('assignmentName').value = assignmentName;
+                        }
+            
+                    }
+                </script>
             </td>
         </tr>
     </table>
 </body>
 </html>
+
