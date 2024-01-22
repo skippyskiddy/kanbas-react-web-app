@@ -48,6 +48,9 @@
             font-size: 12px;
             text-align: center;
         }
+        .grades-table {
+            line-break: anywhere;
+        }
 
     </style>
 </head>
@@ -71,10 +74,10 @@
     <h3>Assignment Names</h3>
     <div class="search-section">
         <input type="text" placeholder="Search Assignments">
-        <button onclick="applyFilters()">Apply Filters</button> <!-- assume this will be JS?-->
+        <button>Apply Filters</button> <!-- assume this will be JS?-->
     </div>
 
-    <table>
+    <table class="grades-table">
         <tr>
             <th>Student Name</th>
             <th>A1 SETUP<br>Out of 100</th>

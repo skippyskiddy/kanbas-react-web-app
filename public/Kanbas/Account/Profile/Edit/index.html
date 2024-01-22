@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Profile Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .form-section {
+            margin-bottom: 20px;
+        }
+        h1, h2 {
+            margin-bottom: 10px;
+        }
+        textarea, select {
+            margin-bottom: 10px;
+            padding: 8px;
+            font-size: 14px;
+            width: 15%; 
+        }
+        textarea {
+            width: 50%; 
+        }
+        .link-fields, .link-fields {
+            display: flex;
+            gap: 5px;
+            flex-direction: row;
+            align-items: flex-start; 
+        }
+        .link-fields h5 {
+            margin-left: 80px; 
+        }
+        .actions {
+            margin-top: 20px;
+        }
+
+        .titlebox { 
+            display:block;
+        }
+        .external-link, .remove-link {
+            color: blue;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        .remove-link {
+            color: red; 
+            margin-top: 10px;
+        }
+        .name-input-field {
+            width: 15%;
+            margin-bottom: 10px;
+            padding: 8px;
+            font-size: 14px;
+        }
+        .input-field {
+            width: 75%;
+            margin-bottom: 10px;
+            padding: 8px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <h1>Elif Tirkes</h1> 
+        <div class="form-section">
+            <label>Name *:</label>
+            <input class="name-input-field" type="text" name="name" value="Elif Tirkes">
+            <label>Pronouns:</label>
+            <select name="pronouns">
+                <option value="">None</option>
+                <option value="he/him">he/him</option>
+                <option value="she/her">she/her</option>
+                <option value="they/them">they/them</option>
+            </select>
+        </div>
+
+        <h2>Contact</h2>
+        <p>No registered services, you can add some on the <a href="settings/page.html" class="external-link">settings page</a>.</p>
+
+        <h2>Biography</h2>
+        <p>Faculty, Software Engineer, AI, Space, and renewables enthusiast.</p> <!-- Static text above input -->
+        <textarea name="biography">Faculty, Software Engineer, AI, Space, and renewables enthusiast.</textarea>
+
+        <h2>Links</h2>
+        <ul>
+            <li><a href="#" class="external-link">YouTube</a> - Links to an external site</li>
+            
+        </ul>
+
+    <!-- Link Input Fields -->
+    <div class="link-fields">
+        <div class ="titlebox">
+        <h4>Title:</h4> 
+        <input class="input-field" type="text" placeholder="Title" aria-label="Link Title">
+        <span class="rightwards-arrow">&#x2192;</span> 
+        </div>
+        
+
+
+        <div class = "titlebox"> 
+            <h4>URL:</h4>
+            <div class="link-fields">
+                <input  class="input-field" type="text" placeholder="URL" aria-label="Link URL">
+                <a href="#" class="remove-link">Remove</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="actions">
+        <button type="button">Add another link</button>
+        <button type="button">Cancel</button>
+        <button type="button" onclick="location.href='Profile/screen.html'">Save Profile</button>
+        <button type="button">Edit Profile</button>
+        <button type="button" onclick="location.href='Profile/screen.html'">Cancel Editing</button>
+    </div>
+    </form>
+</body>
+</html>

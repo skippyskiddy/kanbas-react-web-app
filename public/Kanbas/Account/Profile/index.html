@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .divider {
+            border-bottom: 1px solid #ccc;
+            margin: 20px 0;
+            width: 100%;
+        }
+        .edit-profile {
+            float: right;
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
+            padding: 5px 10px;
+            font-size: 14px;
+            cursor: pointer;
+            position: relative; 
+            top: 10px; 
+            
+        }
+        h1, h2, .link-title, .link-url {
+            clear: both;
+        }
+        .field-container, .link-fields {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .field-container label, .link-fields label,
+        .field-container input[type="text"], .link-fields input[type="text"],
+        .field-container select {
+            margin: 0;
+        }
+        input[type="text"], select, .link-remove, .actions button {
+            padding: 5px;
+            font-size: 14px;
+        }
+        .link-remove {
+            color: blue;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        .actions {
+            margin-top: 20px;
+        }
+        .actions button {
+            margin-right: 10px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+        .rightwards-arrow {
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Elif Tirkes’s Profile</h1>
+    <div class="divider"></div>
+    <a href="../Edit/screen.html" class="edit-profile">&#x270E; Edit Profile</a>
+    
+    <div class="field-container" style="margin-top: 40px;">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" value="Elif Tirkes">
+        <label for="pronouns">Pronouns:</label>
+        <select id="pronouns">
+            <option value="">None</option>
+            <option value="he/him">he/him</option>
+            <option value="she/her">she/her</option>
+            <option value="they/them">they/them</option>
+        </select>
+    </div>
+    
+    <div class="field-container" style="margin-top: 20px;">
+        <label for="title">Title:</label>
+        <input type="text" id="title">
+    </div>
+
+    <h2>Contact</h2>
+    <p>No registered services, you can add some on the settings page</p>
+    <h2>Biography</h2>
+    <p>Faculty, Software Engineer, AI, Space, and renewables enthusiast.</p>
+    <h2>Links</h2>
+    <p><a href="#">Link to Youtube</a></p>
+
+
+</body>
+</html>
