@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Profile Page</title>
+    <style>
+       body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1, h2, .link-title, .link-url {
+            clear: both;
+        }
+        .link-fields {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .link-fields label,
+        .link-fields input[type="text"],
+        input[type="text"], select, .actions button {
+            padding: 5px;
+            font-size: 14px;
+        }
+        .actions {
+            margin-top: 20px;
+        }
+        .actions button {
+            margin-right: 10px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+        .rightwards-arrow {
+            margin: 0 10px;
+        }
+        textarea {
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <h1>Elif Tirkes</h1> 
+        <div class="form-section">
+            <label>Name *:</label>
+            <input class="name-input-field" type="text" name="name" value="Elif Tirkes">
+            <label>Pronouns:</label>
+            <select name="pronouns">
+                <option value="">None</option>
+                <option value="he/him">he/him</option>
+                <option value="she/her">she/her</option>
+                <option value="they/them">they/them</option>
+            </select>
+        </div>
+
+        <br/>
+        <label>Title:</label>
+        <input class="name-input-field" type="text" name="title">
+
+        <h2>Contact</h2>
+        <p>No registered services, you can add some on the <a href="#" class="external-link">settings page</a>.</p>
+
+        <h2>Biography</h2>
+        <p>Faculty, Software Engineer, AI, Space, and renewables enthusiast.</p> <!-- Static text above input -->
+        <textarea name="biography">Faculty, Software Engineer, AI, Space, and renewables enthusiast.</textarea>
+
+        <h2>Links</h2>
+        <ul>
+            <li><a href="#" class="external-link">YouTube</a> - Links to an external site</li>
+            
+        </ul>
+
+    <!-- Link Input Fields -->
+    <div class="link-fields">
+        <div class ="titlebox">
+        <h4>Title:</h4> 
+        <input class="input-field" type="text" placeholder="Title" aria-label="Link Title">
+        <span class="rightwards-arrow">&#x2192;</span> 
+        </div>
+        
+
+
+        <div class = "titlebox"> 
+            <h4>URL:</h4>
+            <div class="link-fields">
+                <input  class="input-field" type="text" placeholder="URL" aria-label="Link URL">
+                <a href="#" class="remove-link">Remove</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="actions">
+        <button type="button">Add another link</button>
+        <button type="button">Cancel</button>
+        <button type="button" onclick="location.href='Profile/screen.html'">Save Profile</button>
+        <button type="button">Edit Profile</button>
+        <button type="button" onclick="location.href='Profile/screen.html'">Cancel Editing</button>
+    </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "/"
+  to = "/Kanbas/Courses/Home/screen.html"
+  status = 200
+  force = true

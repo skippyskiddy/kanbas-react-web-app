@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Kanbas Course Grades Combined</title>
+    <style>
+        body {
+            margin: 20px;
+        }
+        .tabs {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+            width: 80%;
+        }
+        .tabs li {
+            float: left;
+        }
+        .tabs li a {
+            display: inline-block;
+            color: black;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            transition: 0.3s;
+            font-size: 17px;
+            border-right: 1px solid #ccc;
+        }
+        .tabs li a:hover {
+            background-color: #ddd;
+        }
+        .tabs li a.active {
+            background-color: #ccc;
+        }
+        .course-navigation {
+            border: none;
+            padding: 10px;
+            margin-top: 20px;
+            width: 60%;
+        }
+        .course-navigation table {
+            width: 60%;
+            border-collapse: collapse;
+        }
+        .course-navigation th, .course-navigation td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        .course-navigation td span.italic {
+            font-style: italic;
+        }
+        .drag-text {
+            margin-top: 5px;
+            font-size: 15px;
+        }
+        .drag-text h3 {
+            margin-bottom: 5px;
+        }
+        .button {
+            background-color: grey;
+            color: white;
+            padding: 10px 20px;
+            margin: 20px 0;
+            border: none;
+            cursor: pointer;
+            font-size: 17px;
+            margin-left: 10px;
+        }
+        .button:hover {
+            background-color: darkgrey;
+        }
+        .course-navigation td span.italic {
+            font-style: italic;
+            font-size: 11px; 
+        }
+        .section-title {
+            font-size: 18px;
+        }
+</style>
+</head>
+<body>
+    <table width="100%">
+        <tr>
+            <!-- Kanbas Navigation -->
+            <td valign="top">
+                <ul>
+                    <li><a href="../../Account/Profile/screen.html">Account</a></li>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="../../Settings/CourseDetails/screen.html">Courses</a></li>
+                    <li><a href="#">Calendar</a></li>
+                    <li><a href="#">Inbox</a></li>
+                    <li><a href="#">History</a></li>
+                    <li><a href="#">Studio</a></li>
+                    <li><a href="#">Commons</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+            </td>
+
+            <!-- Course Navigation -->
+            <td valign="top">
+                <ul>
+                    <li><a href="../../Courses/Home/screen.html">Home</a></li>
+                    <li><a href="#">Modules</a></li>
+                    <li><a href="#">Piazza</a></li>
+                    <li><a href="../../Courses/Grades/screen.html">Grades</a></li>
+                    <li><a href="../../Courses/Assignments/screen.html">Assignments</a></li>
+                    <li><a href="#">Quizzes</a></li>
+                    <li><a href="#">People</a></li>
+                    <li><a href="#">Panopto Video</a></li>
+                    <li><a href="#">Discussion</a></li>
+                    <li><a href="#">Announcements</a></li>
+                    <li><a href="#">Pages</a></li>
+                    <li><a href="#">Files</a></li>
+                    <li><a href="#">Rubrics</a></li>
+                    <li><a href="#">Outcomes</a></li>
+                    <li><a href="#">Collaborations</a></li>
+                    <li><a href="#">Syllabus</a></li>
+                    <li><a href="screen.html">Settings</a></li>
+                </ul>
+            </td>
+
+            <!-- Content HERE -->
+            <td valign="top">
+
+                <ul class="tabs">
+                    <li><a href="../CourseDetails/screen.html">Course Details</a></li>
+                    <li><a href="javascript:void(0)">Sections</a></li>
+                    <li><a href="screen.html" class="active">Navigation</a></li>
+                    <li><a href="javascript:void(0)">Apps</a></li>
+                    <li><a href="javascript:void(0)">Feature Options</a></li>
+                    <li><a href="javascript:void(0)">Integrations</a></li>
+                </ul>
+            
+            <div class="course-navigation">
+                <p class="drag-text">Drag and drop items to reorder them in the course navigation</p>
+                <table>
+                    <tr><td>Home</td></tr>
+                    <tr><td>Modules</td></tr>
+                    <tr><td>Piazza</td></tr>
+                    <tr><td>Zoom Meetings</td></tr>
+                    <tr><td>Assignments</td></tr>
+                    <tr><td>Quizzes</td></tr>
+                    <tr><td>Grades</td></tr>
+                    <tr><td>People</td></tr>
+                    <tr><td>Panopto Video</td></tr>
+                </table>
+            
+                <div class="drag-text">
+                    <p class="section-title">Drag items here to hide them from students</p>
+                    <p>Disabling most pages will cause students who visit those pages to be redirected to the course home page</p>
+                </div>
+            
+                <table>
+                    <tr><td>Chat<br><span class="italic">Page disabled, won't appear in navigation</span></td></tr>
+                    <tr><td>SCORM<br><span class="italic">Page disabled, won't appear in navigation</span></td></tr>
+                    <tr><td>Attendance<br><span class="italic">Page disabled, won't appear in navigation</span></td></tr>
+                    <tr><td>Barnes and Nobles bookstore<br><span class="italic">Page disabled, won't appear in navigation</span></td></tr>
+                    <tr><td>Digication<br><span class="italic">Page disabled, won't appear in navigation</span></td></tr>
+                    <tr><td>Top Hat<br><span class="italic">Page disabled, won't appear in navigation</span></td></tr>
+                    <tr><td>Syllabus<br><span class="italic">Page disabled, won't appear in navigation</span></td></tr>
+                    <tr><td>Perusall<br><span class="italic">Page disabled, won't appear in navigation</span></td></tr>
+                    <tr><td>Microsoft Team Meetings<br><span class="italic">Page disabled, won't appear in navigation</span></td></tr>
+                    <tr><td>FACT Reporting and Photo Roster<br><span class="italic">Page disabled, won't appear in navigation</span></td></tr>
+                    <tr><td>Progress Reports (Navigate)<br><span class="italic">Page disabled, won't appear in navigation</span></td></tr>
+                    <tr><td>Microsoft Teams for Canvas<br><span class="italic">Page disabled, won't appear in navigation</span></td></tr>
+                    <tr><td>VHL Central<br><span class="italic">Page disabled, won't appear in navigation</span></td></tr>
+                    <tr><td>Gradescope 1.3<br><span class="italic">Page disabled, won't appear in navigation</span></td></tr>
+                    <tr><td>Credentials<br><span class="italic">Page disabled, won't appear in navigation</span></td></tr>
+                    <tr><td>iClicker<br><span class="italic">Page disabled, won't appear in navigation</span></td></tr>
+                </table>
+            </div>
+            
+            <button class="button">Save</button>
+             
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
+

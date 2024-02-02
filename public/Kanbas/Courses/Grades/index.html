@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grades Screen</title>
+    <style>
+        body {
+            color: black;
+            background-color: white;
+            margin: 10px;
+            padding: 0;
+        }
+        .header-section {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+        }
+        .header-section select, .header-section button {
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border-style: double;
+            table-layout: fixed;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 2px;
+            text-align: center;
+            font-size: 12px;
+        }
+        th {
+            font-weight: bold;
+            white-space: normal; /* Allow wrapping */
+        }
+        .search-section {
+            margin-bottom: 10px;
+        }
+        .search-section input, .search-section button {
+            display: block;
+            margin-bottom: 10px;
+        }
+        .grade-input {
+            width: 25px;
+            font-size: 12px;
+            text-align: center;
+        }
+        .grades-table {
+            line-break: anywhere;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="header-section">
+        <select>
+            <option>Gradebook</option>
+        </select>
+        <button>Import</button>
+        <select>
+            <option>Export </option>
+        </select>
+        <button>Configure</button>
+    </div>
+
+    <h3>Student Names</h3>
+    <div class="search-section">
+        <input type="text" placeholder="Search Students">
+    </div>
+
+    <h3>Assignment Names</h3>
+    <div class="search-section">
+        <input type="text" placeholder="Search Assignments">
+        <button>Apply Filters</button> <!-- assume this will be JS?-->
+    </div>
+
+    <table class="grades-table">
+        <tr>
+            <th>Student Name</th>
+            <th>A1 SETUP<br>Out of 100</th>
+            <th>A2 HTML<br>Out of 100</th>
+            <th>A3 CSS<br>Out of 100</th>
+            <th>A4 BOOTSTRAP<br>Out of 100</th>
+            <th>A5 JAVASCRIPT<br>Out of 100</th>
+            <th>A6 REACT<br>Out of 100</th>
+            <th>A7 REDUX<br>Out of 100</th>
+            <th>A8 NODE<br>Out of 100</th>
+            <th>A9 MONGO<br>Out of 100</th>
+        </tr>
+        <tbody>
+            <tr>
+                <td>Alice Wonderland</td>
+                <td>90</td>
+                <td>85</td>
+                <td><input class="grade-input" type="text" value="85"></td>
+                <td>93</td>
+                <td>89</td>
+                <td>87</td>
+                <td>90</td>
+                <td><input class="grade-input" type="text" value="76"></td>
+                <td>91</td>
+            </tr>
+            <tr>
+                <td>Luke Skywalker</td>
+                <td>88</td>
+                <td><input class="grade-input" type="text" value="92"></td>
+                <td>80</td>
+                <td>85</td>
+                <td><input class="grade-input" type="text" value="80"></td>
+                <td>84</td>
+                <td>81</td>
+                <td>83</td>
+                <td>79</td>
+            </tr>
+            <tr>
+                <td>Darth Vader</td>
+                <td>75</td>
+                <td>80</td>
+                <td>70</td>
+                <td>78</td>
+                <td>74</td>
+                <td>72</td>
+                <td>76</td>
+                <td>71</td>
+                <td>73</td>
+            </tr>
+            <tr>
+                <td>Jason Derulo</td>
+                <td>75</td>
+                <td>80</td>
+                <td><input class="grade-input" type="text" value="70"></td>
+                <td>78</td>
+                <td>74</td>
+                <td>72</td>
+                <td><input class="grade-input" type="text" value="76"></td>
+                <td>71</td>
+                <td>73</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
