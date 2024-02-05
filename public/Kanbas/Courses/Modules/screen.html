@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanbas Course Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="index.css"> 
+    <link rel="stylesheet" href="../Navigation/index.css"> 
+    <link rel="stylesheet" href="../../Navigation/index.css"> 
+    <link rel="stylesheet" href="../../../styles.css"> 
+
+
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Kanbas Navigation Sidebar -->
+            <div class="col-md-2 d-none d-md-block">
+                <div class="d-flex flex-column wd-kanbas-navigation">
+                    <div class="school-logo py-2">
+                        <img src="../../images/nlogo.png" alt="Northeastern Logo" class="img-fluid">
+                    </div>
+                    <ul class="nav flex-column mb-auto">
+                        <li class="nav-item"><a class="nav-link" href="../Account/Profile/screen.html"><i class="fas fa-user"></i> Account</a></li>
+                        <li class="nav-item wd-active"><a class="nav-link" href="#"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../Settings/CourseDetails/screen.html"><i class="fas fa-book-open"></i> Courses</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-calendar-alt"></i> Calendar</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-envelope"></i> Inbox</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-history"></i> History</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-paint-brush"></i> Studio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-users"></i> Commons</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-question-circle"></i> Help</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Course Navigation Sidebar -->
+            <div class="col-md-2 d-none d-lg-block">
+                <ul class="wd-navigation">
+                    <li class="wd-active" ><a href="../Home/screen.html">Home</a></li>
+                    <li ><a href="#">Modules</a></li>
+                    <li><a href="http://piazza.com">Piazza</a></li>
+                    <li><a href="#">Zoom</a></li>
+                    <li><a href="../Grades/screen.html">Grades</a></li>
+                    <li><a href="../Assignments/screen.html">Assignments</a></li>
+                    <li><a href="#">Quizzes</a></li>
+                    <li><a href="#">Grades</a></li>
+                    <li><a href="#">People</a></li>
+                    <li><a href="#">Panopto Video</a></li>
+                    <li><a href="#">Discussion</a></li>
+                    <li><a href="#">Announcements</a></li>
+                    <li><a href="#">Pages</a></li>
+                    <li><a href="#">Files</a></li>
+                    <li><a href="#">Rubrics</a></li>
+                    <li><a href="#">Outcomes</a></li>
+                    <li><a href="#">Collaborations</a></li>
+                    <li><a href="#">Syllabus</a></li>
+                    <li><a href="../../Settings/CourseDetails/screen.html">Settings</a></li>
+                </ul>
+            </div>
+
+            <!-- Course Modules Column -->
+            <div class="col-lg-6 col-md-8">
+                
+        <!-- Header Section -->
+        <div class="container-fluid bg-light">
+            <div class="row align-items-center header-padding">
+                <div class="col-auto">
+                    <button class="btn" id="toggle-sidebar"><i class="fas fa-bars"></i></button>
+                </div>
+                <div class="col-auto text-danger">
+                    CS4550.12631.202410
+                </div>
+                <div class="col-auto">
+                    <i class="fa fa-arrow-right text-grey"></i>
+                </div>
+                <div class="col">
+                    Modules
+                </div>
+                <div class="col-auto">
+                    <button class="btn btn-formal"><i class="fa fa-glasses"></i> Student View</button>
+                </div>
+            </div>
+            <hr>
+        </div>
+    
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Modules Column -->
+            <div class="col-lg-8 course-list-column">
+                <!-- Action Buttons -->
+            <!-- Simplified Action Buttons -->
+            <div class="module-actions d-flex justify-content-end mb-3">
+                <button class="btn btn-formal btn-collapse me-2">Collapse All</button>
+                <button class="btn btn-formal btn-view-progress me-2">View Progress</button>
+                <button class="btn btn-formal btn-publish-all btn-success me-2"><i class="fa fa-check"></i> Publish All</button>
+                <button class="btn btn-add-module btn-danger me-2">+ Module</button>
+                <button class="btn btn-formal"><i class="fa fa-ellipsis-v"></i></button>
+            
+            </div>
+            <hr>
+                <!-- Module Week 0 -->
+                <div class="module">
+                    <div class="module-header">
+                        <i class="fa fa-angle-down"></i> Week 0 - Intro
+                        <span class="module-icons float-end">
+                            <i class="fa fa-check-circle text-success"></i>
+                            <i class="fa fa-plus-circle"></i>
+                            <i class="fa fa-ellipsis-h"></i>
+                        </span>
+                    </div>
+                    <div class="module-content">
+                        <div class="module-section">Learning Objectives <i class="fa fa-check-circle text-success float-end"></i></div>
+                        <div class="module-item">Introduction to the course <i class="fa fa-check-circle text-success float-end"></i></div>
+                        <div class="module-item">Learning about web development <i class="fa fa-check-circle text-success float-end"></i></div>
+                        <div class="module-item">Creating a development environment <i class="fa fa-check-circle text-success float-end"></i></div>
+                        <div class="module-item">Creating a web application <i class="fa fa-check-circle text-success float-end"></i></div>
+                        <div class="module-section">Readings <i class="fa fa-check-circle text-success float-end"></i></div>
+                        <div class="module-item">Full stack developer - Chapter 1 <i class="fa fa-check-circle text-success float-end"></i></div>
+                        <div class="module-item">Full stack developer - Chapter 2<i class="fa fa-check-circle text-success float-end"></i></div>
+
+                    
+                    </div>
+                </div>
+                <!-- Module Week 1 -->
+                <div class="module">
+                    <div class="module-header">
+                        <i class="fa fa-angle-down"></i> Week 1 - CSS & HTML
+                        <span class="module-icons float-end">
+                            <i class="fa fa-check-circle text-success"></i>
+                            <i class="fa fa-plus-circle"></i>
+                            <i class="fa fa-ellipsis-h"></i>
+                        </span>
+                    </div>
+                    <div class="module-content">
+                        <div class="module-section">Learning Objectives <i class="fa fa-check-circle text-success float-end"></i></div>
+                        <div class="module-item">Basics of CSS <i class="fa fa-check-circle text-success float-end"></i></div>
+                        <div class="module-item">Basics of HTML <i class="fa fa-check-circle text-success float-end"></i></div>
+                        <div class="module-section">Labs<i class="fa fa-check-circle text-success float-end"></i></div>
+                        <div class="module-item"> Build your own shopping app<i class="fa fa-check-circle text-success float-end"></i></div>
+                        <div class="module-item"> Build your own portfolio<i class="fa fa-check-circle text-success float-end"></i></div>
+
+                    
+                    </div>
+                </div>
+                <!-- Additional modules can be added here -->
+            </div>
+            <!-- Course Status Column -->
+            <div class="col-lg-4 course-info-column">
+                <div class="course-info">
+                    <div class="d-flex justify-content-between">
+                        <button class="btn half-width-btn unpublish-btn"><i class="fa fa-ban"></i><span class="btn-text">Unpublish</span></button>
+                        <button class="btn half-width-btn publish-btn"><i class="fa fa-check-circle"></i><span class="btn-text">Published</span></button>
+  
+                </div>
+                    <!-- Additional buttons with icons -->
+                    <button class="btn btn-outline-secondary w-60 mb-1"><i class="fa fa-download"></i> Import existing content</button>
+                    <button class="btn btn-outline-secondary w-60 mb-1"><i class="fa fa-cloud-download"></i> Import from commons</button>
+                    <button class="btn btn-outline-secondary w-60 mb-1"><i class="fa fa-home"></i> Choose home page</button>
+                    <button class="btn btn-outline-secondary w-60 mb-1"><i class="fa fa-bar-chart"></i> View course stream</button>
+                    <button class="btn btn-outline-secondary w-60 mb-1"><i class="fa fa-bullhorn"></i> New announcement</button>
+                    <button class="btn btn-outline-secondary w-60 mb-1"><i class="fa fa-bar-chart"></i> New analytics</button>
+                    <button class="btn btn-outline-secondary w-60 mb-1"><i class="fa fa-bell"></i> View notifications</button>
+                </div>
+                <div class="course-info-second-col">
+                    <br>
+                    <h5>To Do</h5>
+                    <hr>
+                    <a href="#" class="text-danger">GRADE ENV1 - CSS + HTML</a>
+                </div>
+                
+                <div class="course-info-second-col">
+                    <br>
+                    <h5>Coming Up</h5>
+                    <hr>
+                    <p class="text-danger">Lecture 1</p>
+                    <p class="text-secondary" style="font-size: smaller;">CS4550.12651.202410<br>Sep 11 at 11:45 am</p>
+                    <p class="text-secondary" style="color:red">12 more in the next week...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

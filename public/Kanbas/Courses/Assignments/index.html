@@ -2,151 +2,107 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Assignments Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanbas Assignments</title>
+    <link rel="stylesheet" href="../../../libs/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../libs/font-awesome/css/font-awesome.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            padding-top: 5px;
+        }
+        .list-group-item {
+            border-radius: 0 !important; 
+            border-left: 5px solid green !important; 
+            display: flex; 
+            align-items: center; 
+        }
+        .list-group-item i.fa-pencil-square-o {
+            font-size: 1.2em;
+            margin-right: 5px; 
+        }
+        .assignment-header {
+            background-color: lightgray;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between; /* Adjust for right alignment */
+            align-items: center;
+        }
+        .assignment-header > div {
+            display: flex;
+            align-items: center;
+        }
+        .rounded-circle {
+            font-size: 0.65rem; /* Adjusted size */
+            padding: 2px 8px;
+            border-radius: 50%;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+        }
+        .text-success, .fa-plus-circle, .fa-ellipsis-h, .fa-ellipsis-v, .fa-pencil-square-o {
+            color: #28a745;
+        }
+        .assignment-info {
+            font-size: 0.8rem;
+            color: #6c757d;
+            margin-left: 10px; 
+        }
+        .assignment-due {
+            font-weight: bold;
+        }
+        .btn-outline-secondary {
+            background-color: #f8f9fa; 
+            color: #6c757d;
+            border-color: #6c757d;
+        }
+        .btn-red {
+            background-color: #dc3545;
+            color: #ffffff; 
+        }
+        .module-icons i.fa-check-circle {
+            margin-right: 15px; 
+            font-size: 1.2em; 
+        }
+    </style>
 </head>
 <body>
-    <div>
-        <input type="text" placeholder="Search for Assignments">
-        <button>Group</button>
-        <button>Assignment</button>
-        <select>
-            <option>Edit assignment Dates</option>
-        </select>
+<div class="container mt-3">
+    <div class="d-flex justify-content-between mb-3">
+        <input type="text" class="form-control w-25" placeholder="Search for Assignments">
+        <div>
+            <button class="btn btn-outline-secondary float-end ml-2"><i class="fa fa-plus"></i> Group</button>
+            <button class="btn btn-red float-end ml-2"><i class="fa fa-plus"></i> Assignment</button>
+            <button class="btn btn-outline-secondary float-end ml-2"><i class="fa fa-ellipsis-v"></i></button>
+        </div>
     </div>
-    <hr> 
-
-    <div style="display: flex; align-items: center;">
-        <h3 style="margin-right: 10px;">ASSIGNMENTS - 40% of Total</h3>
-        <select>
-            <option>Edit</option>
-            <option>Speed Grader</option>
-            <option>Duplicate</option>
-            <option>Delete</option>
-            <option>Move To..</option>
-            <option>Send To…</option>
-            <option>Copy To…</option>
-            <option>Share to Commons</option>
-        </select>
+    <hr>
+    <div class="assignment-accordion">
+        <div class="assignment-header">
+            <div>
+                <i class="fa fa-angle-down"></i>
+                <span>Assignments</span>
+            </div>
+            <div>
+                <span class="rounded-circle">40% of total</span>
+                <i class="fa fa-plus-circle"></i>
+                <i class="fa fa-ellipsis-v"></i>
+            </div>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+                <div>
+                    <i class="fa fa-pencil-square-o"></i>
+                    <span>A1-ENV + HTML</span>
+                </div>
+                <div class="assignment-info">Week 0 - SETUP - Week starting on Monday September 5th (9/5/2022)<br>
+                    <span class="assignment-due">Due September 18, 2022 at 11:59 PM | 100 pts</span>
+                </div>
+                <div class="module-icons">
+                    <i class="fa fa-check-circle text-success"></i>
+                    <i class="fa fa-ellipsis-v"></i>
+                </div>
+            </li>
+            <!-- Additional assignments here -->
+        </ul>
     </div>
-    <ul>
-        <li>
-            <a href="Edit/index.html?assignmentName=A1-ENV + HTML">A1-ENV + HTML</a>
-            <br>
-            <a href="#">Multiple Modules</a> | Not Available yet
-        </li>
-        <li>
-            <a href="Edit/index.html?assignmentName=A2 - CSS +BOOTSTRAP">A2 - CSS +BOOTSTRAP</a>
-            <br>
-            <a href="#">Multiple Modules</a> | Not Available yet
-        </li>
-        <li>
-            <a href="Edit/index.html?assignmentName=A3 - JS + REACT">A3 - JS + REACT</a>
-            <br>
-            <a href="#">Multiple Modules</a> | Not Available yet
-        </li>
-        <li>
-            <a href="Edit/index.html?assignmentName=A4- STATE + REDUX">A4- STATE + REDUX</a>
-            <br>
-            <a href="#">Multiple Modules</a> | Not Available yet
-        </li>
-        <li>
-            <a href="Edit/index.html?assignmentName=A5 - NODE + SESSION">A5 - NODE + SESSION</a>
-            <br>
-            <a href="#">Multiple Modules</a> | Not Available yet
-        </li>
-        <li>
-            <a href="Edit/index.html?assignmentName=A6 - MONGO + MONGOOSE">A6 - MONGO + MONGOOSE</a>
-            <br>
-            <a href="#">Multiple Modules</a> | Not Available yet
-        </li>
-    </ul>
-    
-    <div style="display: flex; align-items: center;">
-        <h3 style="margin-right: 10px;">QUIZZES 10% OF Total</h3>
-        <select>
-            <option>Edit</option>
-            <option>Speed Grader</option>
-            <option>Duplicate</option>
-            <option>Delete</option>
-            <option>Move To..</option>
-            <option>Send To…</option>
-            <option>Copy To…</option>
-            <option>Share to Commons</option>
-        </select>
-    </div>
-    <ul>
-        <li>
-            <a href="#">Q1- HTML</a>
-            <br>
-            <a href="#">Multiple Modules</a> | Not Available yet
-        </li>
-        <li>
-            <a href="#">Q2 - CSS</a>
-            <br>
-            <a href="#">Multiple Modules</a> | Not Available yet
-        </li>
-        <li>
-            <a href="#">Q3 - JS, ES6</a>
-            <br>
-            <a href="#">Multiple Modules</a> | Not Available yet
-        </li>
-        <li>
-            <a href="#">Q4 - NODE</a>
-            <br>
-            <a href="#">Multiple Modules</a> | Not Available yet
-        </li>
-        <li>
-            <a href="#">Q5 - MONGO</a>
-            <br>
-            <a href="#">Multiple Modules</a> | Not Available yet
-        </li>
-    </ul>
-    
-    <div style="display: flex; align-items: center;">
-        <h3 style="margin-right: 10px;">EXAMS 20% OF Total</h3>
-        <select>
-            <option>Edit</option>
-            <option>Speed Grader</option>
-            <option>Duplicate</option>
-            <option>Delete</option>
-            <option>Move To..</option>
-            <option>Send To…</option>
-            <option>Copy To…</option>
-            <option>Share to Commons</option>
-        </select>
-    </div>
-    <ul>
-        <li>
-            <a href="#">Midterm</a>
-            <br>
-            <a href="#">Multiple Modules</a> | Not Available yet
-        </li>
-        <li>
-            <a href="#">Final</a>
-            <br>
-            <a href="#">Multiple Modules</a> | Not Available yet
-        </li>
-    </ul>
-    
-    <div style="display: flex; align-items: center;">
-        <h3 style="margin-right: 10px;">PROJECT 30% OF Total</h3>
-        <select>
-            <option>Edit</option>
-            <option>Speed Grader</option>
-            <option>Duplicate</option>
-            <option>Delete</option>
-            <option>Move To..</option>
-            <option>Send To…</option>
-            <option>Copy To…</option>
-            <option>Share to Commons</option>
-        </select>
-    </div>
-    <ul>
-        <li>
-            <a href="#">Project</a>
-            <br>
-            <a href="#">Multiple Modules</a> | Not Available yet
-        </li>
-    </ul>
-</body>
-</html>
+</div>
