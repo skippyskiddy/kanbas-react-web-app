@@ -1,0 +1,47 @@
+body {
+    padding-top: 5px;
+}
+.list-group {
+    border-radius: 0 !important;
+}
+.list-group-item {
+    border-radius: 0 !important; 
+    border: 0.5px solid gray !important;
+    border-left: 5px solid green !important; 
+    display: flex; 
+    align-items: center; 
+}
+.list-group-item i.fa-pencil-square-o {
+    font-size: 1.2em;
+    margin-right: 5px; 
+}
+.assignment-header {
+    background-color: lightgray;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between; /* Adjust for right alignment */
+    align-items: center;
+}
+.assignment-header > div {
+    display: flex;
+    align-items: center;
+}
+.assignment-info {
+    font-size: 0.8rem;
+    margin-left: 10px; 
+}
+.assignment-due {
+    font-weight: bold;
+}
+.btn-outline-secondary {
+    background-color: #f8f9fa; 
+    border-color: #6c757d;
+}
+.btn-red {
+    background-color: #dc3545;
+    color: #ffffff; 
+}
+.module-icons i.fa-check-circle {
+    margin-right: 15px; 
+    font-size: 1.2em;
+}

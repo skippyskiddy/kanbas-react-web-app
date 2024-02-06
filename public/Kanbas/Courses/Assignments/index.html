@@ -4,105 +4,156 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kanbas Assignments</title>
-    <link rel="stylesheet" href="../../../libs/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="../../../libs/font-awesome/css/font-awesome.css">
-    <style>
-        body {
-            background-color: #f8f9fa;
-            padding-top: 5px;
-        }
-        .list-group-item {
-            border-radius: 0 !important; 
-            border-left: 5px solid green !important; 
-            display: flex; 
-            align-items: center; 
-        }
-        .list-group-item i.fa-pencil-square-o {
-            font-size: 1.2em;
-            margin-right: 5px; 
-        }
-        .assignment-header {
-            background-color: lightgray;
-            padding: 10px;
-            display: flex;
-            justify-content: space-between; /* Adjust for right alignment */
-            align-items: center;
-        }
-        .assignment-header > div {
-            display: flex;
-            align-items: center;
-        }
-        .rounded-circle {
-            font-size: 0.65rem; /* Adjusted size */
-            padding: 2px 8px;
-            border-radius: 50%;
-            background-color: #f0f0f0;
-            border: 1px solid #ccc;
-        }
-        .text-success, .fa-plus-circle, .fa-ellipsis-h, .fa-ellipsis-v, .fa-pencil-square-o {
-            color: #28a745;
-        }
-        .assignment-info {
-            font-size: 0.8rem;
-            color: #6c757d;
-            margin-left: 10px; 
-        }
-        .assignment-due {
-            font-weight: bold;
-        }
-        .btn-outline-secondary {
-            background-color: #f8f9fa; 
-            color: #6c757d;
-            border-color: #6c757d;
-        }
-        .btn-red {
-            background-color: #dc3545;
-            color: #ffffff; 
-        }
-        .module-icons i.fa-check-circle {
-            margin-right: 15px; 
-            font-size: 1.2em; 
-        }
-    </style>
+    <link rel="stylesheet" href="../../../../libs/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../../libs/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="index.css" />
 </head>
 <body>
 <div class="container mt-3">
     <div class="d-flex justify-content-between mb-3">
         <input type="text" class="form-control w-25" placeholder="Search for Assignments">
-        <div>
-            <button class="btn btn-outline-secondary float-end ml-2"><i class="fa fa-plus"></i> Group</button>
-            <button class="btn btn-red float-end ml-2"><i class="fa fa-plus"></i> Assignment</button>
-            <button class="btn btn-outline-secondary float-end ml-2"><i class="fa fa-ellipsis-v"></i></button>
+        <div class="float-end">
+            <button class="btn btn-outline-secondary ml-2"><i class="fa fa-plus"></i> Group</button>
+            <button class="btn btn-red ml-2"><i class="fa fa-plus"></i> Assignment</button>
+            <button class="btn btn-outline-secondary ml-2"><i class="fa fa-ellipsis-v"></i></button>
         </div>
     </div>
     <hr>
     <div class="assignment-accordion">
         <div class="assignment-header">
             <div>
-                <i class="fa fa-angle-down"></i>
-                <span>Assignments</span>
+                <i class="fa fa-reorder px-2"></i>
+                <i class="fa fa-angle-down pe-4"></i>
+                <strong>Assignments</strong>
             </div>
             <div>
-                <span class="rounded-circle">40% of total</span>
-                <i class="fa fa-plus-circle"></i>
-                <i class="fa fa-ellipsis-v"></i>
+                <span class="border px-2 rounded-pill">40% of total</span>
+                <i class="px-2 fa fa-plus"></i>
+                <i class="px-2 fa fa-ellipsis-v"></i>
             </div>
         </div>
         <ul class="list-group list-group-flush">
-            <li class="list-group-item">
-                <div>
-                    <i class="fa fa-pencil-square-o"></i>
-                    <span>A1-ENV + HTML</span>
-                </div>
-                <div class="assignment-info">Week 0 - SETUP - Week starting on Monday September 5th (9/5/2022)<br>
-                    <span class="assignment-due">Due September 18, 2022 at 11:59 PM | 100 pts</span>
+
+            <!-- START A1 -->
+            <li class="list-group-item justify-content-between">
+                <div class="d-flex align-items-center">
+                    <div class="d-flex align-items-center">
+                        <i class="pe-2 fa fa-reorder"></i>
+                        <i class="fa fa-pencil-square-o text-success"></i>
+                    </div>
+                    <div class="assignment-info">
+                        <h5>A1-ENV + HTML</h5>
+                        <span class="text-secondary">Week 0 - SETUP - Week starting on Monday September 5th (9/5/2022)</span><br>
+                        <span class="text-secondary"><strong>Due</strong> September 18, 2022 at 11:59 PM | 100 pts</span>
+                    </div>
                 </div>
                 <div class="module-icons">
                     <i class="fa fa-check-circle text-success"></i>
                     <i class="fa fa-ellipsis-v"></i>
                 </div>
             </li>
-            <!-- Additional assignments here -->
+            <!-- END ASSIGNMENT -->
+
+             <!-- START A2 -->
+             <li class="list-group-item justify-content-between">
+                <div class="d-flex align-items-center">
+                    <div class="d-flex align-items-center">
+                        <i class="pe-2 fa fa-reorder"></i>
+                        <i class="fa fa-pencil-square-o text-success"></i>
+                    </div>
+                    <div class="assignment-info">
+                        <h5>A2 - CSS + BOOTSTRAP</h5>
+                        <span class="text-secondary">Week 1 - HTML & CSS - Week starting on Monday September 12th (9/12/2022)</span><br>
+                        <span class="text-secondary"><strong>Due</strong> September 25, 2022 at 11:59 PM | 100 pts</span>
+                    </div>
+                </div>
+                <div class="module-icons">
+                    <i class="fa fa-check-circle text-success"></i>
+                    <i class="fa fa-ellipsis-v"></i>
+                </div>
+            </li>
+            <!-- END ASSIGNMENT -->
+
+             <!-- START A3 -->
+             <li class="list-group-item justify-content-between">
+                <div class="d-flex align-items-center">
+                    <div class="d-flex align-items-center">
+                        <i class="pe-2 fa fa-reorder"></i>
+                        <i class="fa fa-pencil-square-o text-success"></i>
+                    </div>
+                    <div class="assignment-info">
+                        <h5>A3 - JS + REACT</h5>
+                        <span class="text-secondary">Week 2 - REACT - Week starting on Monday September 19th (9/19/2022)</span><br>
+                        <span class="text-secondary"><strong>Due</strong> October 2, 2022 at 11:59 PM | 100 pts</span>
+                    </div>
+                </div>
+                <div class="module-icons">
+                    <i class="fa fa-check-circle text-success"></i>
+                    <i class="fa fa-ellipsis-v"></i>
+                </div>
+            </li>
+            <!-- END ASSIGNMENT -->
+
+             <!-- START A4 -->
+             <li class="list-group-item justify-content-between">
+                <div class="d-flex align-items-center">
+                    <div class="d-flex align-items-center">
+                        <i class="pe-2 fa fa-reorder"></i>
+                        <i class="fa fa-pencil-square-o text-success"></i>
+                    </div>
+                    <div class="assignment-info">
+                        <h5>A4 - STATE + REDUX</h5>
+                        <span class="text-secondary">Week 3 - REDUX - Week starting on Monday September 26th (9/26/2022)</span><br>
+                        <span class="text-secondary"><strong>Due</strong> October 10, 2022 at 11:59 PM | 100 pts</span>
+                    </div>
+                </div>
+                <div class="module-icons">
+                    <i class="fa fa-check-circle text-success"></i>
+                    <i class="fa fa-ellipsis-v"></i>
+                </div>
+            </li>
+            <!-- END ASSIGNMENT -->
+
+             <!-- START A5 -->
+             <li class="list-group-item justify-content-between">
+                <div class="d-flex align-items-center">
+                    <div class="d-flex align-items-center">
+                        <i class="pe-2 fa fa-reorder"></i>
+                        <i class="fa fa-pencil-square-o text-success"></i>
+                    </div>
+                    <div class="assignment-info">
+                        <h5>A5 - NODE + SESSION</h5>
+                        <span class="text-secondary">Week 4 - NODE - Week starting on Monday October 3rd (10/3/2022)</span><br>
+                        <span class="text-secondary"><strong>Due</strong> October 23, 2022 at 11:59 PM | 100 pts</span>
+                    </div>
+                </div>
+                <div class="module-icons">
+                    <i class="fa fa-check-circle text-success"></i>
+                    <i class="fa fa-ellipsis-v"></i>
+                </div>
+            </li>
+            <!-- END ASSIGNMENT -->
+
+             <!-- START A6 -->
+             <li class="list-group-item justify-content-between">
+                <div class="d-flex align-items-center">
+                    <div class="d-flex align-items-center">
+                        <i class="pe-2 fa fa-reorder"></i>
+                        <i class="fa fa-pencil-square-o text-success"></i>
+                    </div>
+                    <div class="assignment-info">
+                        <h5>A6 - MONGO + MONGOOSE</h5>
+                        <span class="text-secondary">Week 5 - MONGOOSE - Week starting on Monday October 10th (10/10/2022)</span><br>
+                        <span class="text-secondary"><strong>Due</strong> October 18, 2022 at 11:59 PM | 100 pts</span>
+                    </div>
+                </div>
+                <div class="module-icons">
+                    <i class="fa fa-check-circle text-success"></i>
+                    <i class="fa fa-ellipsis-v"></i>
+                </div>
+            </li>
+            <!-- END ASSIGNMENT -->
+
         </ul>
     </div>
 </div>

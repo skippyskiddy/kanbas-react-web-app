@@ -72,14 +72,10 @@ body {
     }
 }
 
-
 @media (min-width: 992px) {
     .course-info-column {
         flex: 0 0 auto;
         width: 22%; 
-    }
-    .course-list-column {
-        flex: 1 0 auto;
     }
 }
 
