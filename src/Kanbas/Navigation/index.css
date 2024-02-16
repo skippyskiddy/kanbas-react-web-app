@@ -1,0 +1,56 @@
+.wd-kanbas-navigation {
+    background-color: black;
+    color: white;
+    min-height: 100vh;
+    max-height: 100vh; 
+    overflow-y: auto; 
+    width: 80px;
+    padding-left: 0;
+    padding-top: 10px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed; 
+    top: 0;
+    left: 0;
+}
+
+.school-logo img {
+    width: 80px; 
+    height: auto;
+    margin-bottom: 15px; 
+}
+
+.nav-item {
+    text-align: center;
+    margin-bottom: 8px; 
+}
+
+.nav-link {
+    color: white;
+    padding: 6px 0; 
+    font-size: 0.8em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-link svg {
+    color: red; 
+    margin-bottom: 3px; 
+    width: 2em; 
+    height: 2em; 
+}
+
+.wd-active .nav-link {
+    background-color: white;
+    color: red;
+}
+
+.wd-active .nav-link svg {
+    color: red;
+}
+
+.nav-link i.fa-user {
+    color: white;
+}
