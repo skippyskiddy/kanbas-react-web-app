@@ -1,0 +1,116 @@
+[
+  {
+    "_id": "M101",
+    "name": "The Art of Code Debugging",
+    "description": "Exploring the intricate art of bugs and debugging.",
+    "course": "CS101",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "History of Debugging",
+        "description": "Beetles and bugs, debugging through the ages.",
+        "module": "M101"
+      },
+      {
+        "_id": "L102",
+        "name": "Debugging Techniques",
+        "description": "Innovative techniques to debug your code.",
+        "module": "M101"
+      },
+      {
+        "_id": "L103",
+        "name": "Famous Bugs in History",
+        "description": "A review of famous software bugs and real life bugs- and the lessons learned.",
+        "module": "M101"
+      }
+    ]
+  },
+  {
+    "_id": "M102",
+    "name": "Coffee and Code",
+    "description": "The essential relationship between coffee consumption and coding performance.",
+    "course": "CS101",
+    "lessons": [
+      {
+        "_id": "L201",
+        "name": "Types of Coffee for Coding",
+        "description": "An exploration of coffee types best suited for long coding sessions (Americano is best) .",
+        "module": "M102"
+      },
+      {
+        "_id": "L202",
+        "name": "The Coffee-Code Cycle",
+        "description": "Understanding the cyclic dependency between coding and coffee.",
+        "module": "M102"
+      },
+      {
+        "_id": "L203",
+        "name": "Espresso vs. Filter Coffee: The Impact on Bug Fixing",
+        "description": "A study on how different types of coffee affect debugging skills.",
+        "module": "M102"
+      }
+    ]
+  },
+  {
+    "_id": "M103",
+    "name": "Quantum Computing for Cats",
+    "description": "An introductory course on quantum computing, simplified for human comprehension.",
+    "course": "CS101",
+    "lessons": [
+      {
+        "_id": "L301",
+        "name": "Schrodinger's Bit",
+        "description": "Understanding the quantum bit through Schrodinger's cat.",
+        "module": "M103"
+      },
+      {
+        "_id": "L302",
+        "name": "Quantum Entanglement for Kittens",
+        "description": "Explaining quantum entanglement with yarn.",
+        "module": "M103"
+      },
+      {
+        "_id": "L303",
+        "name": "Using Quantum Computers to Open Cat Kibble",
+        "description": "A practical application of quantum computing in a cat's daily life.",
+        "module": "M103"
+      }
+    ]
+  },
+  {
+    "_id": "M201",
+    "name": "The Philosophy of Artificial Intelligence",
+    "description": "Contemplating the existential implications of AI and its future.",
+    "course": "CS102"
+  },
+  {
+    "_id": "M202",
+    "name": "Blockchain and Beyond",
+    "description": "A dive into blockchain technology.",
+    "course": "CS102"
+  },
+  {
+    "_id": "M203",
+    "name": "Hacking the Kitchen",
+    "description": "Applying computer science principles to revolutionize mac-and-cheese.",
+    "course": "CS102"
+  },
+  {
+    "_id": "M301",
+    "name": "The Secret Life of Algorithms",
+    "description": "A look at how algorithms influence our world.",
+    "course": "CS103"
+  },
+  {
+    "_id": "M302",
+    "name": "Virtual Reality in Everyday Life",
+    "description": "Exploring how virtual reality is merging with daily activities (Apple Vision Pro) .",
+    "course": "CS103"
+  },
+  {
+    "_id": "M303",
+    "name": "The Gamification of Everything",
+    "description": "Understanding the process  of applying game design elements.",
+    "course": "CS103"
+  }
+]

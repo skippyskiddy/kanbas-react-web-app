@@ -1,0 +1,16 @@
+.home-container {
+    display: flex;
+    justify-content: space-between; 
+  }
+  
+  .home-container > * {
+    flex: 1; 
+    margin: 0 10px; 
+  }
+  
+  @media (max-width: 768px) {
+    .home-container {
+      flex-direction: column; 
+    }
+  }
+  
