@@ -16,7 +16,7 @@ function ModuleList() {
   return (
     <div className="container-fluid">
       <div className="row">
-        <div className="col-lg-8 course-list-column">
+        <div className="course-list-column">
           {/* Action Buttons */}
           <div className="module-actions d-flex justify-content-end mb-3">
             <button className="btn btn-formal btn-collapse me-2">Collapse All</button>

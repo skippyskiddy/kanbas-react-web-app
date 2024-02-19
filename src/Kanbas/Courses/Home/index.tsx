@@ -11,7 +11,7 @@ function Home() {
           <div className="col-md-auto flex-grow-1">
             <ModuleList />
           </div>
-          <div className="col-md-4">
+          <div className="col-md-3">
             <CourseStatus />
           </div>
         </div>

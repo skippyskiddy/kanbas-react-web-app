@@ -11,7 +11,7 @@ function Kanbas() {
   return (
     <div className="kanbas-container">
       {/* KanbasNavigation Column */}
-      <div className="kanbas-navigation me-4">
+      <div className="kanbas-navigation me-2 pe-4">
         <KanbasNavigation />
       </div>
 

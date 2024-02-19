@@ -3,7 +3,7 @@ import { FaDownload, FaCloudDownloadAlt, FaHome, FaChartBar, FaBullhorn, FaBell 
 
 function CourseStatus() {
   return (
-    <div className="col-lg-4 course-info-column">
+    <div>
       <div className="course-info">
         {/* Buttons for import and other actions */}
         <button className="btn btn-outline-secondary w-100 mb-1"><FaDownload /> Import existing content</button>

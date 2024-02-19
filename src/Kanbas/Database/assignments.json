@@ -1,0 +1,47 @@
+[
+  {
+    "_id": "A101",
+    "title": "Debugging Cat Behavior Algorithms",
+    "course": "CS101"
+  },
+  {
+    "_id": "A102",
+    "title": "Quantum Tunnels in Cat Exploration",
+    "course": "CS101"
+  },
+  {
+    "_id": "A103",
+    "title": "Schrodinger's Cat Simulation",
+    "course": "CS101"
+  },
+  {
+    "_id": "A201",
+    "title": "Feline Motion Analysis with Computer Vision",
+    "course": "CS102"
+  },
+  {
+    "_id": "A202",
+    "title": "Catnip Effect on Physics",
+    "course": "CS102"
+  },
+  {
+    "_id": "A203",
+    "title": "Thermal Imaging for Cats",
+    "course": "CS102"
+  },
+  {
+    "_id": "A301",
+    "title": "Constructing a Quantum Cat Feeder",
+    "course": "CS103"
+  },
+  {
+    "_id": "A302",
+    "title": "Orbital Mechanics of Cat Toys",
+    "course": "CS103"
+  },
+  {
+    "_id": "A303",
+    "title": "Systems Engineering for Cat Living Rooms",
+    "course": "CS103"
+  }
+]

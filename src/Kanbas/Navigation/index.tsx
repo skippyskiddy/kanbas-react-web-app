@@ -22,7 +22,7 @@ const KanbasNavigation = () => {
 
 
     return (
-      <div className="d-flex col-md-1 wd-kanbas-navigation">
+      <div className="d-flex wd-kanbas-navigation">
 
         <ul className="nav flex-column mb-auto">
           {links.map((link, index) => (

@@ -23,7 +23,7 @@ function Dashboard() {
                   <FaEllipsisV className="options-btn position-absolute" style={{ bottom: '10px' }} />
                 </div>
                 <div className="card-body">
-                  <Link to={`/Courses/${course._id}/Home`} className="course-name" style={{ textDecoration: "none", color: "black" }}>
+                  <Link to={`/Kanbas/Courses/${course._id}/Home`} className="course-name" style={{ textDecoration: "none", color: "black" }}>
                     {course.name}
                   </Link>
                   <p className="course-details">
