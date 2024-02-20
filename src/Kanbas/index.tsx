@@ -20,7 +20,7 @@ function Kanbas() {
         {/* Main Content */}
         <div className="kanbas-content">
           <Routes>
-            <Route path="/" element={<Navigate to="/Dashboard" />} />
+            <Route path="/" element={<Navigate to="/Kanbas/Dashboard" />} />
             <Route path="Modules" element={<Modules/>} />
             <Route path="Account" element={<h1>Account</h1>} />
             <Route path="Dashboard" element={<Dashboard />} />
