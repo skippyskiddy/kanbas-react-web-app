@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { courses } from '../Database';
 import './index.css';
-import { FaRegEdit, FaEllipsisV} from 'react-icons/fa'; // Import the ellipsis icon
+import { FaRegEdit, FaEllipsisV} from 'react-icons/fa'; 
 
 function Dashboard() {
   return (
@@ -28,8 +28,9 @@ function Dashboard() {
                   </Link>
                   <p className="course-details">
                     <span className="course-number">{course.number}</span><br />
-                    {course.startDate} - {course.endDate}<br />
-                    Full term
+                    {/* {course.startDate} - {course.endDate}<br /> */} 
+                    {/* commenting the date out because it's not in the image  */}
+                    202410_1_Spring 2024 Semester Full Term
                   </p>
                   <FaRegEdit className="edit-btn position-absolute" style={{ bottom: '15px'}} />
 

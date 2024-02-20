@@ -67,7 +67,7 @@
     "lastName": "Li",
     "email": "feifei@ai-lab.com",
     "dob": "1976-04-16",
-    "role": "FACULTY"
+    "role": "STUDENT"
   },
   {
     "_id": "128",
@@ -77,7 +77,7 @@
     "lastName": "Koller",
     "email": "daphne@coursera.org",
     "dob": "1968-08-27",
-    "role": "FACULTY"
+    "role": "STUDENT"
   },
   {
     "_id": "129",
@@ -87,6 +87,16 @@
     "lastName": "Churchland",
     "email": "patricia@neurotech.edu",
     "dob": "1943-07-16",
-    "role": "FACULTY"
+    "role": "STUDENT"
+  },
+  {
+    "_id": "130",
+    "username": "json_derulo",
+    "password": "lightsout29",
+    "firstName": "Jason",
+    "lastName": "Derulo",
+    "email": "derulo@json.edu",
+    "dob": "1987-02-11",
+    "role": "STUDENT"
   }
 ]

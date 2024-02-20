@@ -9,7 +9,7 @@ function Grades() {
     const es = enrollments.filter((enrollment) => enrollment.course === courseId);
     return (
         <div>
-            <h1>Grades</h1>
+            {/* <h1>Grades</h1> */}
             <div className="flex-fill px-2">
                 <div className="d-flex justify-content-between mb-3">
                     <div className="ms-auto text-black">

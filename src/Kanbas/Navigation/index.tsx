@@ -9,7 +9,7 @@ const KanbasNavigation = () => {
     const location = useLocation();
   
     const links = [
-    { to: "/Kanbas/Account", icon: <FaUser />, text: "Account" },
+    { to: "/Kanbas/Account", icon: <FaUser style={{ color: 'white' }}  />, text: "Account" },
     { to: "/Kanbas/Dashboard", icon: <FaTachometerAlt />, text: "Dashboard" },
     { to: "/Kanbas/Courses", icon: <FaBook />, text: "Courses" },
     { to: "/Kanbas/Calendar", icon: <FaCalendar />, text: "Calendar" },
@@ -23,10 +23,12 @@ const KanbasNavigation = () => {
 
     return (
       <div className="d-flex wd-kanbas-navigation">
-
+        <div className="py-2">
+            <img src="/images/nlogo.png" alt="Northeastern Logo" className="img-fluid" />
+        </div>
         <ul className="nav flex-column mb-auto">
           {links.map((link, index) => (
-            <li key={index} className={`nav-item ${location.pathname === link.to ? 'wd-active' : ''}`}>
+            <li key={index} className={`nav-item ${location.pathname.startsWith(link.to) ? 'wd-active' : ''}`}>
               <Link className="nav-link" to={link.to}>
                 {link.icon} {link.text}
               </Link>

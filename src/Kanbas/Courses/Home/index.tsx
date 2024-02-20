@@ -5,8 +5,7 @@ import CourseStatus from "./CourseStatus";
 function Home() {
   return (
     <div>
-      <h2>Home</h2>
-      <div className="container-fluid">
+      <div className="d-grid">
         <div className="row">
           <div className="col-md-auto flex-grow-1">
             <ModuleList />

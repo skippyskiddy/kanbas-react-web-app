@@ -3,7 +3,6 @@ import Nav from "../Nav";
 
 
 
-
 function Labs() {
     return (
        <div>
