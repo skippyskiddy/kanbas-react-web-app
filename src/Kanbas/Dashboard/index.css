@@ -1,0 +1,68 @@
+body {
+    background-color: #f8f9fa; 
+}
+.dashboard-container {
+    padding: 20px;
+    max-width: 100%;
+    padding-left: 50px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.second-header {
+    margin-top: 20px;
+    margin-left: 20px;
+
+}
+
+.cards {
+    margin-left: 20px;
+}
+
+.dashboard-content {
+    padding-left: 18px; 
+}
+
+.course-card {
+    margin-bottom: 40px;
+    position: relative; 
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+.card-img-top {
+    height: 150px; 
+    background-color: #007bff; 
+    color: white;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.options-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px; 
+}
+
+.edit-btn {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 20px; 
+    margin-left: 10px;
+}
+.course-name {
+    color: navy;
+    font-weight: bold;
+    text-decoration: none;
+}
+.course-details {
+    font-size: smaller;
+}
+.icon-pen {
+    color: grey;
+}
+  
+.course-number {
+    font-size: 1.2rem; 
+}

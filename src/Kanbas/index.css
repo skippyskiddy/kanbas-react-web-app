@@ -1,0 +1,20 @@
+body {
+    --bs-breadcrumb-divider: '>';
+}
+
+.kanbas-container {
+    display: flex;
+    height: 100vh; 
+    overflow: hidden; 
+  }
+  
+  .kanbas-navigation {
+    flex: 0 1 auto;
+    overflow-y: auto; 
+  }
+  
+  .kanbas-content {
+    flex-grow: 1; 
+    overflow-y: auto; 
+  }
+  
