@@ -1,5 +1,5 @@
 [[redirects]]
   from = "/"
-  to = "/Kanbas/Courses/Home/screen.html"
+  to = "index.html"
   status = 200
   force = true

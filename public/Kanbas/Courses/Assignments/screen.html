@@ -1,198 +1,347 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <title>Kanbas Course Grades Combined</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanbas Assignments</title>
+    <link rel="stylesheet" href="../../../libs/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="../../../libs/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="../Navigation/index.css">
+    <link rel="stylesheet" href="../../Navigation/index.css">
 </head>
+
 <body>
-    <table width="100%">
-        <tr>
-            <!-- Kanbas Navigation -->
-            <td valign="top">
-                <ul>
-                    <li><a href="../../Account/Profile/screen.html">Account</a></li>
-                    <li><a href="#">Dashboard</a></li>
-                    <li><a href="../../Settings/CourseDetails/screen.html">Courses</a></li>
-                    <li><a href="#">Calendar</a></li>
-                    <li><a href="#">Inbox</a></li>
-                    <li><a href="#">History</a></li>
-                    <li><a href="#">Studio</a></li>
-                    <li><a href="#">Commons</a></li>
-                    <li><a href="#">Help</a></li>
+    <div class="d-flex">
+        <!-- Kanbas Navigation Sidebar -->
+        <div class="col-md-1 d-none d-md-block h-100">
+            <div class="d-flex flex-column wd-kanbas-navigation h-100">
+                <div class="school-logo py-2">
+                    <img src="../../../images/nlogo.png" alt="Northeastern Logo" class="img-fluid">
+                </div>
+                <ul class="nav flex-column mb-auto">
+                    <li class="nav-item"><a class="nav-link" href="../../Account/Profile/screen.html"><i
+                                class="fa fa-user"></i> Account</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../Dashboard/screen.html"><i class="fa fa-tachometer"></i>
+                            Dashboard</a></li>
+                    <li class="nav-item wd-active"> <a class="nav-link" href="../Home/screen.html"><i
+                                class="fa fa-book"></i> Courses</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-calendar"></i>
+                            Calendar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-envelope"></i> Inbox</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-history"></i> History</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-paint-brush"></i> Studio</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-users"></i> Commons</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-question-circle"></i>
+                            Help</a></li>
                 </ul>
-            </td>
+            </div>
+        </div>
 
-            <!-- Course Navigation -->
-            <td valign="top">
-                <ul>
-                    <li><a href="../Home/screen.html">Home</a></li>
-                    <li><a href="#">Modules</a></li>
-                    <li><a href="#">Piazza</a></li>
-                    <li><a href="../Grades/screen.html">Grades</a></li>
-                    <li><a href="../Assignments/screen.html">Assignments</a></li>
-                    <li><a href="#">Quizzes</a></li>
-                    <li><a href="#">People</a></li>
-                    <li><a href="#">Panopto Video</a></li>
-                    <li><a href="#">Discussion</a></li>
-                    <li><a href="#">Announcements</a></li>
-                    <li><a href="#">Pages</a></li>
-                    <li><a href="#">Files</a></li>
-                    <li><a href="#">Rubrics</a></li>
-                    <li><a href="#">Outcomes</a></li>
-                    <li><a href="#">Collaborations</a></li>
-                    <li><a href="#">Syllabus</a></li>
-                    <li><a href="../../Settings/CourseDetails/screen.html">Settings</a></li>
-                </ul>
-            </td>
+        <!-- Kanbas Navigation Sidebar for small screens-->
+        <div class="collapse" id="kanbasNavSmall">
+            <div class="d-flex vw-100">
+                <div class="d-none d-sm-block d-md-none flex-fill">
+                    <ul class="nav flex-column mb-auto m-4">
+                        <li class="py-1 my-1"><a class="text-danger my-0" href="../../Account/Profile/screen.html"><i
+                                    class="fa fa-user"></i> Account</a></li>
+                        <li class="py-1 my-1"><a class="text-danger my-0" href="../../Dashboard/screen.html"><i class="fa fa-tachometer"></i>
+                                Dashboard</a></li>
+                        <li class="py-1 my-1"><a class="text-danger my-0"
+                                href="../Home/screen.html"><i class="fa fa-book"></i> Courses</a></li>
+                        <li class="py-1 my-1"><a class="text-danger my-0" href="#"><i
+                                    class="fa fa-calendar"></i>Calendar</a></li>
+                        <li class="py-1 my-1"><a class="text-danger my-0" href="#"><i class="fa fa-envelope"></i>
+                                Inbox</a></li>
+                        <li class="py-1 my-1"><a class="text-danger my-0" href="#"><i class="fa fa-history"></i>
+                                History</a></li>
+                        <li class="py-1 my-1"><a class="text-danger my-0" href="#"><i
+                                    class="fa fa-paint-brush"></i>Studio</a></li>
+                        <li class="py-1 my-1"><a class="text-danger my-0" href="#"><i class="fa fa-users"></i>
+                                Commons</a></li>
+                        <li class="py-1 my-1"><a class="text-danger my-0" href="#"><i
+                                    class="fa fa-question-circle"></i>Help</a></li>
+                    </ul>
+                </div>
+                <div class="" style="padding: 10px;">
+                    <button data-toggle="collapse" data-target="#kanbasNavSmall" aria-expanded="false"
+                        aria-controls="kanbasNavSmall">X</button>
+                </div>
+            </div>
+        </div>
 
-            <!-- Content HERE -->
-            <td valign="top">
-                <body>
-                    <div>
-                        <input type="text" placeholder="Search for Assignments">
-                        <button>Group</button>
-                        <button>Assignment</button>
-                        <select>
-                            <option>Edit assignment Dates</option>
-                        </select>
+        <div class="container-fluid">
+            <!-- Medium to large header -->
+            <div class="d-none d-md-flex d-flex align-items-center text-center my-4 border-bottom">
+                <div>
+                    <button class="btn" data-toggle="collapse" data-target="#courseNavFull" aria-expanded="true"
+                        aria-controls="courseNavFull"><i class="fa fa-bars"></i></button>
+                </div>
+                <div class="d-flex flex-grow-1">
+                    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                        <ol class="breadcrumb mb-0">
+                            <li class="breadcrumb-item"><a href="#">CS4550.12631.202410</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Modules</li>
+                        </ol>
+                    </nav>
+                </div>
+                <div class="py-2">
+                    <button class="btn btn-formal bg-light border"><i class="fa fa-binoculars"></i> Student
+                        View</button>
+                </div>
+                <hr>
+            </div>
+
+            <!-- Small header -->
+            <div class="container-fluid d-none d-sm-flex d-md-none bg-dark py-3 text-white">
+                <div class="col-auto">
+                    <button class="btn text-white" data-toggle="collapse" data-target="#kanbasNavSmall"
+                        aria-expanded="true" aria-controls="kanbasNavSmall"><i class="fa fa-bars"></i></button>
+                </div>
+                <div class="d-block align-items-center text-center flex-fill">
+                    <p class="m-0 text-decoration-underline">
+                        CS4550.12631.202410
+                    </p>
+                    <p class="m-0 text-decoration-underline">
+                        Modules
+                    </p>
+                </div>
+                <div class="col-auto">
+                    <button class="btn text-white"><i class="fa fa-binoculars"></i></button>
+                </div>
+                <div class="col-auto d-none d-sm-block d-md-none">
+                    <button class="btn text-white" data-toggle="collapse" data-target="#courseNavSmall"
+                        aria-expanded="true" aria-controls="courseNavSmall"><i class="fa fa-chevron-down"></i></button>
+                </div>
+                <hr>
+            </div>
+
+            <!-- Course Navigation Sidebar -->
+            <div class="d-flex">
+                <div class="collapse show" id="courseNavFull">
+                    <div class="col d-none d-md-block">
+                        <ul class="wd-navigation list-group">
+                            <li class="my-1 py-1"><a href="../Home/screen.html">Home</a></li>
+                            <li class="my-1 py-1"><a href="#">Modules</a></li>
+                            <li class="my-1 py-1"><a href="http://piazza.com">Piazza</a></li>
+                            <li class="my-1 py-1"><a href="#">Zoom</a></li>
+                            <li class="my-1 py-1"><a href="../Grades/screen.html">Grades</a></li>
+                            <li class="my-1 py-1 wd-active"><a href="screen.html">Assignments</a></li>
+                            <li class="my-1 py-1"><a href="#">Quizzes</a></li>
+                            <li class="my-1 py-1"><a href="#">People</a></li>
+                            <li class="my-1 py-1"><a href="#">Panopto Video</a></li>
+                            <li class="my-1 py-1"><a href="#">Discussion</a></li>
+                            <li class="my-1 py-1"><a href="#">Announcements</a></li>
+                            <li class="my-1 py-1"><a href="#">Pages</a></li>
+                            <li class="my-1 py-1"><a href="#">Files</a></li>
+                            <li class="my-1 py-1"><a href="#">Rubrics</a></li>
+                            <li class="my-1 py-1"><a href="#">Outcomes</a></li>
+                            <li class="my-1 py-1"><a href="#">Collaborations</a></li>
+                            <li class="my-1 py-1"><a href="#">Syllabus</a></li>
+                            <li class="my-1 py-1"><a href="../../Settings/CourseDetails/screen.html">Settings</a></li>
+                        </ul>
                     </div>
-                    <hr> 
+                </div>
+
+                <div class="collapse" id="courseNavSmall">
+                    <div class="d-flex vw-100">
+                        <div class="d-none d-sm-block d-md-none flex-fill">
+                            <ul class="wd-navigation">
+                                <li class="my-1 py-1"><a class="text-danger my-0" href="../Home/screen.html">Home</a>
+                                </li>
+                                <li class="my-1 py-1"><a class="text-danger my-0" href="#">Modules</a></li>
+                                <li class="my-1 py-1"><a class="text-danger my-0" href="http://piazza.com">Piazza</a>
+                                </li>
+                                <li class="my-1 py-1"><a class="text-danger my-0" href="#">Zoom</a></li>
+                                <li class="my-1 py-1"><a class="text-danger my-0"
+                                        href="../Grades/screen.html">Grades</a></li>
+                                <li class="my-1 py-1"><a class="text-danger my-0 wd-active"
+                                        href="screen.html">Assignments</a></li>
+                                <li class="my-1 py-1"><a class="text-danger my-0" href="#">Quizzes</a></li>
+                                <li class="my-1 py-1"><a class="text-danger my-0" href="#">People</a></li>
+                                <li class="my-1 py-1"><a class="text-danger my-0" href="#">Panopto Video</a></li>
+                                <li class="my-1 py-1"><a class="text-danger my-0" href="#">Discussion</a></li>
+                                <li class="my-1 py-1"><a class="text-danger my-0" href="#">Announcements</a></li>
+                                <li class="my-1 py-1"><a class="text-danger my-0" href="#">Pages</a></li>
+                                <li class="my-1 py-1"><a class="text-danger my-0" href="#">Files</a></li>
+                                <li class="my-1 py-1"><a class="text-danger my-0" href="#">Rubrics</a></li>
+                                <li class="my-1 py-1"><a class="text-danger my-0" href="#">Outcomes</a></li>
+                                <li class="my-1 py-1"><a class="text-danger my-0" href="#">Collaborations</a></li>
+                                <li class="my-1 py-1"><a class="text-danger my-0" href="#">Syllabus</a></li>
+                                <li class="my-1 py-1"><a class="text-danger my-0"
+                                        href="../../Settings/CourseDetails/screen.html">Settings</a></li>
+                            </ul>
+                        </div>
+                        <div class="" style="padding: 10px;">
+                            <button data-toggle="collapse" data-target="#courseNavSmall" aria-expanded="false"
+                                aria-controls="courseNavSmall">X</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex-fill px-2">
+                    <div class="d-flex justify-content-between mb-3">
+                        <input type="text" class="form-control w-25" placeholder="Search for Assignments">
+                        <div class="float-end">
+                            <button class="btn btn-outline-secondary ml-2"><i class="fa fa-plus"></i> Group</button>
+                            <button class="btn btn-red ml-2"><i class="fa fa-plus"></i> Assignment</button>
+                            <button class="btn btn-outline-secondary ml-2"><i class="fa fa-ellipsis-v"></i></button>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="assignment-accordion">
+                        <div class="assignment-header">
+                            <div>
+                                <i class="fa fa-reorder px-2"></i>
+                                <i class="fa fa-angle-down pe-4"></i>
+                                <strong>Assignments</strong>
+                            </div>
+                            <div>
+                                <span class="border px-2 rounded-pill">40% of total</span>
+                                <i class="px-2 fa fa-plus"></i>
+                                <i class="px-2 fa fa-ellipsis-v"></i>
+                            </div>
+                        </div>
+                        <ul class="list-group list-group-flush">
                 
-                    <div style="display: flex; align-items: center;">
-                        <h3 style="margin-right: 10px;">ASSIGNMENTS - 40% of Total</h3>
-                        <select>
-                            <option>Edit</option>
-                            <option>Speed Grader</option>
-                            <option>Duplicate</option>
-                            <option>Delete</option>
-                            <option>Move To..</option>
-                            <option>Send To…</option>
-                            <option>Copy To…</option>
-                            <option>Share to Commons</option>
-                        </select>
+                            <!-- START A1 -->
+                            <li class="list-group-item justify-content-between">
+                                <div class="d-flex align-items-center">
+                                    <div class="d-flex align-items-center">
+                                        <i class="pe-2 fa fa-reorder"></i>
+                                        <a href="Edit/screen.html"><i class="fa fa-pencil-square-o text-success"></i></a>
+                                    </div>
+                                    <div class="assignment-info">
+                                        <h5>A1-ENV + HTML</h5>
+                                        <span class="text-secondary">Week 0 - SETUP - Week starting on Monday September 5th (9/5/2022)</span><br>
+                                        <span class="text-secondary"><strong>Due</strong> September 18, 2022 at 11:59 PM | 100 pts</span>
+                                    </div>
+                                </div>
+                                <div class="module-icons">
+                                    <i class="fa fa-check-circle text-success"></i>
+                                    <i class="fa fa-ellipsis-v"></i>
+                                </div>
+                            </li>
+                            <!-- END ASSIGNMENT -->
+                
+                             <!-- START A2 -->
+                             <li class="list-group-item justify-content-between">
+                                <div class="d-flex align-items-center">
+                                    <div class="d-flex align-items-center">
+                                        <i class="pe-2 fa fa-reorder"></i>
+                                        <a href="Edit/screen.html"><i class="fa fa-pencil-square-o text-success"></i></a>
+                                    </div>
+                                    <div class="assignment-info">
+                                        <h5>A2 - CSS + BOOTSTRAP</h5>
+                                        <span class="text-secondary">Week 1 - HTML & CSS - Week starting on Monday September 12th (9/12/2022)</span><br>
+                                        <span class="text-secondary"><strong>Due</strong> September 25, 2022 at 11:59 PM | 100 pts</span>
+                                    </div>
+                                </div>
+                                <div class="module-icons">
+                                    <i class="fa fa-check-circle text-success"></i>
+                                    <i class="fa fa-ellipsis-v"></i>
+                                </div>
+                            </li>
+                            <!-- END ASSIGNMENT -->
+                
+                             <!-- START A3 -->
+                             <li class="list-group-item justify-content-between">
+                                <div class="d-flex align-items-center">
+                                    <div class="d-flex align-items-center">
+                                        <i class="pe-2 fa fa-reorder"></i>
+                                        <a href="Edit/screen.html"><i class="fa fa-pencil-square-o text-success"></i></a>
+                                    </div>
+                                    <div class="assignment-info">
+                                        <h5>A3 - JS + REACT</h5>
+                                        <span class="text-secondary">Week 2 - REACT - Week starting on Monday September 19th (9/19/2022)</span><br>
+                                        <span class="text-secondary"><strong>Due</strong> October 2, 2022 at 11:59 PM | 100 pts</span>
+                                    </div>
+                                </div>
+                                <div class="module-icons">
+                                    <i class="fa fa-check-circle text-success"></i>
+                                    <i class="fa fa-ellipsis-v"></i>
+                                </div>
+                            </li>
+                            <!-- END ASSIGNMENT -->
+                
+                             <!-- START A4 -->
+                             <li class="list-group-item justify-content-between">
+                                <div class="d-flex align-items-center">
+                                    <div class="d-flex align-items-center">
+                                        <i class="pe-2 fa fa-reorder"></i>
+                                        <a href="Edit/screen.html"><i class="fa fa-pencil-square-o text-success"></i></a>
+                                    </div>
+                                    <div class="assignment-info">
+                                        <h5>A4 - STATE + REDUX</h5>
+                                        <span class="text-secondary">Week 3 - REDUX - Week starting on Monday September 26th (9/26/2022)</span><br>
+                                        <span class="text-secondary"><strong>Due</strong> October 10, 2022 at 11:59 PM | 100 pts</span>
+                                    </div>
+                                </div>
+                                <div class="module-icons"> 
+                                    <i class="fa fa-check-circle text-success"></i>
+                                    <i class="fa fa-ellipsis-v"></i>
+                                </div>
+                            </li>
+                            <!-- END ASSIGNMENT -->
+                
+                             <!-- START A5 -->
+                             <li class="list-group-item justify-content-between">
+                                <div class="d-flex align-items-center">
+                                    <div class="d-flex align-items-center">
+                                        <i class="pe-2 fa fa-reorder"></i>
+                                        <a href="Edit/screen.html"><i class="fa fa-pencil-square-o text-success"></i></a>
+                                    </div>
+                                    <div class="assignment-info">
+                                        <h5>A5 - NODE + SESSION</h5>
+                                        <span class="text-secondary">Week 4 - NODE - Week starting on Monday October 3rd (10/3/2022)</span><br>
+                                        <span class="text-secondary"><strong>Due</strong> October 23, 2022 at 11:59 PM | 100 pts</span>
+                                    </div>
+                                </div>
+                                <div class="module-icons">
+                                    <i class="fa fa-check-circle text-success"></i>
+                                    <i class="fa fa-ellipsis-v"></i>
+                                </div>
+                            </li>
+                            <!-- END ASSIGNMENT -->
+                
+                             <!-- START A6 -->
+                             <li class="list-group-item justify-content-between">
+                                <div class="d-flex align-items-center">
+                                    <div class="d-flex align-items-center">
+                                        <i class="pe-2 fa fa-reorder"></i>
+                                        <a href="Edit/screen.html"><i class="fa fa-pencil-square-o text-success"></i></a>
+                                    </div>
+                                    <div class="assignment-info">
+                                        <h5>A6 - MONGO + MONGOOSE</h5>
+                                        <span class="text-secondary">Week 5 - MONGOOSE - Week starting on Monday October 10th (10/10/2022)</span><br>
+                                        <span class="text-secondary"><strong>Due</strong> October 18, 2022 at 11:59 PM | 100 pts</span>
+                                    </div>
+                                </div>
+                                <div class="module-icons">
+                                    <i class="fa fa-check-circle text-success"></i>
+                                    <i class="fa fa-ellipsis-v"></i>
+                                </div>
+                            </li>
+                            <!-- END ASSIGNMENT -->
+                
+                        </ul>
                     </div>
-                    <ul>
-                        <li>
-                            <a href="Edit/screen.html?assignmentName=A1-ENV + HTML">A1-ENV + HTML</a>
-                            <br>
-                            <a href="#">Multiple Modules</a> | Not Available yet
-                        </li>
-                        <li>
-                            <a href="Edit/screen.html?assignmentName=A2 - CSS +BOOTSTRAP">A2 - CSS +BOOTSTRAP</a>
-                            <br>
-                            <a href="#">Multiple Modules</a> | Not Available yet
-                        </li>
-                        <li>
-                            <a href="Edit/screen.html?assignmentName=A3 - JS + REACT">A3 - JS + REACT</a>
-                            <br>
-                            <a href="#">Multiple Modules</a> | Not Available yet
-                        </li>
-                        <li>
-                            <a href="Edit/screen.html?assignmentName=A4- STATE + REDUX">A4- STATE + REDUX</a>
-                            <br>
-                            <a href="#">Multiple Modules</a> | Not Available yet
-                        </li>
-                        <li>
-                            <a href="Edit/screen.html?assignmentName=A5 - NODE + SESSION">A5 - NODE + SESSION</a>
-                            <br>
-                            <a href="#">Multiple Modules</a> | Not Available yet
-                        </li>
-                        <li>
-                            <a href="Edit/screen.html?assignmentName=A6 - MONGO + MONGOOSE">A6 - MONGO + MONGOOSE</a>
-                            <br>
-                            <a href="#">Multiple Modules</a> | Not Available yet
-                        </li>
-                    </ul>
-                    
-                    <div style="display: flex; align-items: center;">
-                        <h3 style="margin-right: 10px;">QUIZZES 10% OF Total</h3>
-                        <select>
-                            <option>Edit</option>
-                            <option>Speed Grader</option>
-                            <option>Duplicate</option>
-                            <option>Delete</option>
-                            <option>Move To..</option>
-                            <option>Send To…</option>
-                            <option>Copy To…</option>
-                            <option>Share to Commons</option>
-                        </select>
-                    </div>
-                    <ul>
-                        <li>
-                            <a href="#">Q1- HTML</a>
-                            <br>
-                            <a href="#">Multiple Modules</a> | Not Available yet
-                        </li>
-                        <li>
-                            <a href="#">Q2 - CSS</a>
-                            <br>
-                            <a href="#">Multiple Modules</a> | Not Available yet
-                        </li>
-                        <li>
-                            <a href="#">Q3 - JS, ES6</a>
-                            <br>
-                            <a href="#">Multiple Modules</a> | Not Available yet
-                        </li>
-                        <li>
-                            <a href="#">Q4 - NODE</a>
-                            <br>
-                            <a href="#">Multiple Modules</a> | Not Available yet
-                        </li>
-                        <li>
-                            <a href="#">Q5 - MONGO</a>
-                            <br>
-                            <a href="#">Multiple Modules</a> | Not Available yet
-                        </li>
-                    </ul>
-                    
-                    <div style="display: flex; align-items: center;">
-                        <h3 style="margin-right: 10px;">EXAMS 20% OF Total</h3>
-                        <select>
-                            <option>Edit</option>
-                            <option>Speed Grader</option>
-                            <option>Duplicate</option>
-                            <option>Delete</option>
-                            <option>Move To..</option>
-                            <option>Send To…</option>
-                            <option>Copy To…</option>
-                            <option>Share to Commons</option>
-                        </select>
-                    </div>
-                    <ul>
-                        <li>
-                            <a href="#">Midterm</a>
-                            <br>
-                            <a href="#">Multiple Modules</a> | Not Available yet
-                        </li>
-                        <li>
-                            <a href="#">Final</a>
-                            <br>
-                            <a href="#">Multiple Modules</a> | Not Available yet
-                        </li>
-                    </ul>
-                    
-                    <div style="display: flex; align-items: center;">
-                        <h3 style="margin-right: 10px;">PROJECT 30% OF Total</h3>
-                        <select>
-                            <option>Edit</option>
-                            <option>Speed Grader</option>
-                            <option>Duplicate</option>
-                            <option>Delete</option>
-                            <option>Move To..</option>
-                            <option>Send To…</option>
-                            <option>Copy To…</option>
-                            <option>Share to Commons</option>
-                        </select>
-                    </div>
-                    <ul>
-                        <li>
-                            <a href="#">Project</a>
-                            <br>
-                            <a href="#">Multiple Modules</a> | Not Available yet
-                        </li>
-                    </ul>
-            </td>
-        </tr>
-    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
 </body>
-</html>
 
+</html>

@@ -1,0 +1,36 @@
+.form-box {
+    border: 1px solid #ccc;
+}
+
+.form-action-buttons {
+    gap: 5px;
+}
+
+.form-box {
+    border: 1px solid #ccc;
+}
+
+.form-action-buttons .btn {
+    border-radius: 0;
+    /* No rounded corners */
+}
+
+.status-section {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.status-section .status-text {
+    color: green;
+    margin-right: 10px;
+}
+
+.status-section .fa-ellipsis-v {
+    font-size: 20px;
+    color: #6c757d;
+    /* Grey color */
+    background-color: transparent;
+    border: none;
+}

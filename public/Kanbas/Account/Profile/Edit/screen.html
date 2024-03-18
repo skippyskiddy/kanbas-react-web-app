@@ -2,6 +2,11 @@
 <html lang="en">
 <head>
     <title>Kanbas Edit Profile Combined</title>
+    <link rel="stylesheet" href="../../../../libs/bootstrap/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../../../../libs/font-awesome/css/font-awesome.css"/>
+    <link rel="stylesheet" href="../../../Courses/Navigation/index.css">
+    <link rel="stylesheet" href="../../../Navigation/index.css">
+    <link rel="stylesheet" href="../../../../styles.css">
     <style>
         body {
             margin: 20px;
@@ -38,23 +43,36 @@
     </style>
 </head>
 <body>
+    <div class="d-flex">
+        <!-- Kanbas Navigation Sidebar -->
+        <div class="col-md-1 d-none d-md-block h-100">
+            <div class="d-flex flex-column wd-kanbas-navigation h-100">
+                <div class="school-logo py-2">
+                    <img src="../../../../images/nlogo.png" alt="Northeastern Logo" class="img-fluid">
+                </div>
+                <ul class="nav flex-column mb-auto">
+                    <li class="nav-item wd-active"><a class="nav-link" href="../screen.html"><i
+                                class="fa fa-user"></i> Account</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../../Dashboard/screen.html"><i class="fa fa-tachometer"></i>
+                            Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../../Courses/Home/screen.html"><i
+                                class="fa fa-book"></i> Courses</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-calendar"></i>
+                            Calendar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-envelope"></i> Inbox</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-history"></i> History</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-paint-brush"></i> Studio</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-users"></i> Commons</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-question-circle"></i>
+                            Help</a></li>
+                </ul>
+            </div>
+        </div>
+  
     <table width="100%">
         <tr>
-            <!-- Kanbas Navigation -->
-            <td valign="top">
-                <ul>
-                    <li><a href="../../../Account/Profile/screen.html">Account</a></li>
-                    <li><a href="#">Dashboard</a></li>
-                    <li><a href="../../../Settings/CourseDetails/screen.html">Courses</a></li>
-                    <li><a href="#">Calendar</a></li>
-                    <li><a href="#">Inbox</a></li>
-                    <li><a href="#">History</a></li>
-                    <li><a href="#">Studio</a></li>
-                    <li><a href="#">Commons</a></li>
-                    <li><a href="#">Help</a></li>
-                </ul>
-            </td>
-
             <!-- Account Navigation -->
             <td valign="top">
                 <ul>

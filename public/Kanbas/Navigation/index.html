@@ -1,13 +1,38 @@
-<ul>
-    <li><a href="../Account/Profile/screen.html">Account</a></li>
-    <li><a href="#">Dashboard</a></li>
-    <li><a href="../Settings/CourseDetails/screen.html">Courses</a></li>
-    <li><a href="#">Calendar</a></li>
-    <li><a href="#">Inbox</a></li>
-    <li><a href="#">History</a></li>
-    <li><a href="#">Studio</a></li>
-    <li><a href="#">Commons</a></li>
-    <li><a href="#">Help</a></li>
-</ul>
-
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="../styles.css"> 
+    <!-- added styles.css -->
+    <title>Kanbas Navigation</title>
+</head>
+<body>
+    <div class="d-flex flex-column wd-kanbas-navigation">
+        <div class="school-logo py-2">
+            <img src="../../images/nlogo.png" alt="Northeastern Logo" class="img-fluid">
+        </div>
+        <ul class="nav flex-column mb-auto">
+            <li class="nav-item"><a class="nav-link" href="../Account/Profile/screen.html"><i
+                        class="fa fa-user"></i> Account</a></li>
+            <li class="nav-item wd-active"><a class="nav-link" href="../Dashboard/screen.html"><i class="fa fa-tachometer"></i>
+                    Dashboard</a></li>
+            <li class="nav-item"><a class="nav-link" href="../Courses/Home/screen.html"><i
+                        class="fa fa-book"></i> Courses</a></li>
+            <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-calendar"></i>
+                    Calendar</a></li>
+            <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-envelope"></i> Inbox</a></li>
+            <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-history"></i> History</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-paint-brush"></i> Studio</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-users"></i> Commons</a></li>
+            <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-question-circle"></i>
+                    Help</a></li>
+        </ul>
+    </div>
+</body>
+</html>

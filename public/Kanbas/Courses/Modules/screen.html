@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanbas Course Home</title>
+    <link rel="stylesheet" href="../../../libs/bootstrap/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../../../libs/font-awesome/css/font-awesome.css"/>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="../Navigation/index.css">
+    <link rel="stylesheet" href="../../Navigation/index.css">
+</head>
+
+<body>
+    <div class="d-flex">
+        <!-- Kanbas Navigation Sidebar -->
+        <div class="col-md-1 d-none d-md-block h-100">
+            <div class="d-flex flex-column wd-kanbas-navigation h-100">
+                <div class="school-logo py-2">
+                    <img src="../../../images/nlogo.png" alt="Northeastern Logo" class="img-fluid">
+                </div>
+                <ul class="nav flex-column mb-auto">
+                    <li class="nav-item"><a class="nav-link" href="../../Account/Profile/screen.html"><i
+                                class="fa fa-user"></i> Account</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../Dashboard/screen.html"><i class="fa fa-tachometer"></i>
+                            Dashboard</a></li>
+                    <li class="nav-item wd-active"><a class="nav-link" href="../Home/screen.html"><i
+                                class="fa fa-book"></i> Courses</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-calendar"></i>
+                            Calendar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-envelope"></i> Inbox</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-history"></i> History</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-paint-brush"></i> Studio</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-users"></i> Commons</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-question-circle"></i>
+                            Help</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Kanbas Navigation Sidebar for small screens-->
+        <div class="collapse" id="kanbasNavSmall">
+            <div class="d-flex vw-100">
+                <div class="d-none d-sm-block d-md-none flex-fill">
+                    <ul class="nav flex-column mb-auto m-4">
+                        <li class="py-1 my-1"><a class="text-danger my-0" href="../../Account/Profile/screen.html"><i class="fa fa-user"></i> Account</a></li>
+                        <li class="py-1 my-1"><a class="text-danger my-0" href="../../Dashboard/screen.html"><i class="fa fa-tachometer"></i> Dashboard</a></li>
+                        <li class="py-1 my-1"><a class="text-danger my-0" href="../Home/screen.html"><i class="fa fa-book"></i> Courses</a></li>
+                        <li class="py-1 my-1"><a class="text-danger my-0" href="#"><i class="fa fa-calendar"></i>Calendar</a></li>
+                        <li class="py-1 my-1"><a class="text-danger my-0" href="#"><i class="fa fa-envelope"></i> Inbox</a></li>
+                        <li class="py-1 my-1"><a class="text-danger my-0" href="#"><i class="fa fa-history"></i> History</a></li>
+                        <li class="py-1 my-1"><a class="text-danger my-0" href="#"><i class="fa fa-paint-brush"></i>Studio</a></li>
+                        <li class="py-1 my-1"><a class="text-danger my-0" href="#"><i class="fa fa-users"></i> Commons</a></li>
+                        <li class="py-1 my-1"><a class="text-danger my-0" href="#"><i class="fa fa-question-circle"></i>Help</a></li>
+                    </ul>
+                </div>
+                <div class="" style="padding: 10px;">
+                    <button data-toggle="collapse" data-target="#kanbasNavSmall" aria-expanded="false"
+                        aria-controls="kanbasNavSmall">X</button>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <!-- Medium to large header -->
+            <div class="d-none d-md-flex bg-light d-flex align-items-center text-center py-4">
+                <div>
+                    <button class="btn" data-toggle="collapse" data-target="#courseNavFull" aria-expanded="true"
+                        aria-controls="courseNavFull"><i class="fa fa-bars"></i></button>
+                </div>
+                <div class="d-flex flex-grow-1">
+                    <nav style="--bs-breadcrumb-divider: '>';"  aria-label="breadcrumb">
+                        <ol class="breadcrumb mb-0">
+                            <li class="breadcrumb-item"><a href="#">CS4550.12631.202410</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Modules</li>
+                        </ol>
+                    </nav>
+                </div>
+                <div class="col-auto">
+                    <button class="btn btn-formal bg-light border"><i class="fa fa-binoculars"></i> Student View</button>
+                </div>
+                <hr>
+            </div>
+
+            <!-- Small header -->
+            <div class="container-fluid d-none d-sm-flex d-md-none bg-dark py-3 text-white">
+                <div class="col-auto">
+                    <button class="btn text-white" data-toggle="collapse" data-target="#kanbasNavSmall" aria-expanded="true"
+                        aria-controls="kanbasNavSmall"><i class="fa fa-bars"></i></button>
+                </div>
+                <div class="d-block align-items-center text-center flex-fill">
+                    <p class="m-0 text-decoration-underline">
+                        CS4550.12631.202410
+                    </p>
+                    <p class="m-0 text-decoration-underline">
+                        Modules
+                    </p>
+                </div>
+                <div class="col-auto">
+                    <button class="btn text-white"><i class="fa fa-binoculars"></i></button>
+                </div>
+                <div class="col-auto d-none d-sm-block d-md-none">
+                    <button class="btn text-white" data-toggle="collapse" data-target="#courseNavSmall" aria-expanded="true"
+                        aria-controls="courseNavSmall"><i class="fa fa-chevron-down"></i></button>
+                </div>
+                <hr>
+            </div>
+
+            <div class="d-flex">
+                <!-- Course Navigation Sidebar -->
+                <div class="collapse show" id="courseNavFull">
+                    <div class="col d-none d-md-block">
+                        <ul class="wd-navigation list-group">
+                            <li class="my-1 py-1"><a href="../Home/screen.html">Home</a></li>
+                            <li class="my-1 py-1 wd-active"><a href="screen.html">Modules</a></li>
+                            <li class="my-1 py-1"><a href="http://piazza.com">Piazza</a></li>
+                            <li class="my-1 py-1"><a href="#">Zoom</a></li>
+                            <li class="my-1 py-1"><a href="../Grades/screen.html">Grades</a></li>
+                            <li class="my-1 py-1"><a href="../Assignments/screen.html">Assignments</a></li>
+                            <li class="my-1 py-1"><a href="#">Quizzes</a></li>
+                            <li class="my-1 py-1"><a href="#">People</a></li>
+                            <li class="my-1 py-1"><a href="#">Panopto Video</a></li>
+                            <li class="my-1 py-1"><a href="#">Discussion</a></li>
+                            <li class="my-1 py-1"><a href="#">Announcements</a></li>
+                            <li class="my-1 py-1"><a href="#">Pages</a></li>
+                            <li class="my-1 py-1"><a href="#">Files</a></li>
+                            <li class="my-1 py-1"><a href="#">Rubrics</a></li>
+                            <li class="my-1 py-1"><a href="#">Outcomes</a></li>
+                            <li class="my-1 py-1"><a href="#">Collaborations</a></li>
+                            <li class="my-1 py-1"><a href="#">Syllabus</a></li>
+                            <li class="my-1 py-1"><a href="../../Settings/CourseDetails/screen.html">Settings</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="collapse" id="courseNavSmall">
+                    <div class="d-flex vw-100">
+                        <div class="d-none d-sm-block d-md-none flex-fill">
+                            <ul class="wd-navigation">
+                                <li class="my-1 py-1"><a class="text-danger my-0" href="../Home/screen.html"><strong>Home</strong></a></li>
+                                <li class="my-1 py-1 wd-active"><a class="text-danger my-0" href="screen.html">Modules</a></li>
+                                <li class="my-1 py-1"><a class="text-danger my-0" href="http://piazza.com">Piazza</a></li>
+                                <li class="my-1 py-1"><a class="text-danger my-0" href="#">Zoom</a></li>
+                                <li class="my-1 py-1"><a class="text-danger my-0" href="../Grades/screen.html">Grades</a></li>
+                                <li class="my-1 py-1"><a class="text-danger my-0" href="../Assignments/screen.html">Assignments</a></li>
+                                <li class="my-1 py-1"><a class="text-danger my-0" href="#">Quizzes</a></li>
+                                <li class="my-1 py-1"><a class="text-danger my-0" href="#">People</a></li>
+                                <li class="my-1 py-1"><a class="text-danger my-0" href="#">Panopto Video</a></li>
+                                <li class="my-1 py-1"><a class="text-danger my-0" href="#">Discussion</a></li>
+                                <li class="my-1 py-1"><a class="text-danger my-0" href="#">Announcements</a></li>
+                                <li class="my-1 py-1"><a class="text-danger my-0" href="#">Pages</a></li>
+                                <li class="my-1 py-1"><a class="text-danger my-0" href="#">Files</a></li>
+                                <li class="my-1 py-1"><a class="text-danger my-0" href="#">Rubrics</a></li>
+                                <li class="my-1 py-1"><a class="text-danger my-0" href="#">Outcomes</a></li>
+                                <li class="my-1 py-1"><a class="text-danger my-0" href="#">Collaborations</a></li>
+                                <li class="my-1 py-1"><a class="text-danger my-0" href="#">Syllabus</a></li>
+                                <li class="my-1 py-1"><a class="text-danger my-0" href="../../Settings/CourseDetails/screen.html">Settings</a></li>
+                            </ul>
+                        </div>
+                        <div class="" style="padding: 10px;">
+                            <button data-toggle="collapse" data-target="#courseNavSmall" aria-expanded="false"
+                                aria-controls="courseNavSmall">X</button>
+                        </div>
+                    </div>
+                </div>
+
+            <!-- Course Modules Column -->
+                <div class="flex-fill px-2">
+
+
+                    <div class="container-fluid py-2">
+                        <div class="row">
+                            <!-- Modules Column -->
+                            <div class="flex-grow-1">
+                                <!-- Action Buttons -->
+                                <!-- Simplified Action Buttons -->
+                                <div class="module-actions d-flex justify-content-end mb-3">
+                                    <button class="me-2 btn btn-formal">Collapse All</button>
+                                    <button class="btn btn-formal me-2">View Progress</button>
+                                    <button class="btn btn-formal btn-success me-2"><i class="fa fa-check text-success"></i>
+                                        Publish All</button>
+                                    <button class="btn btn-danger me-2">+ Module</button>
+                                    <button class="btn btn-formal"><i class="fa fa-ellipsis-v"></i></button>
+
+                                </div>
+                                <hr>
+                                <!-- Module Week 0 -->
+                                <div class="module">
+                                    <div class="module-header">
+                                        <i class="fa fa-angle-down"></i> Week 0 - Intro
+                                        <span class="module-icons float-end">
+                                            <i class="fa fa-check-circle text-success"></i>
+                                            <i class="fa fa-plus-circle"></i>
+                                            <i class="fa fa-ellipsis-h"></i>
+                                        </span>
+                                    </div>
+                                    <div class="module-content">
+                                        <div class="module-section">Learning Objectives <i
+                                                class="fa fa-check-circle text-success float-end"></i></div>
+                                        <div class="module-item">Introduction to the course <i
+                                                class="fa fa-check-circle text-success float-end"></i></div>
+                                        <div class="module-item">Learning about web development <i
+                                                class="fa fa-check-circle text-success float-end"></i></div>
+                                        <div class="module-item">Creating a development environment <i
+                                                class="fa fa-check-circle text-success float-end"></i></div>
+                                        <div class="module-item">Creating a web application <i
+                                                class="fa fa-check-circle text-success float-end"></i></div>
+                                        <div class="module-section">Readings <i
+                                                class="fa fa-check-circle text-success float-end"></i></div>
+                                        <div class="module-item">Full stack developer - Chapter 1 <i
+                                                class="fa fa-check-circle text-success float-end"></i></div>
+                                        <div class="module-item">Full stack developer - Chapter 2<i
+                                                class="fa fa-check-circle text-success float-end"></i></div>
+
+
+                                    </div>
+                                </div>
+                                <!-- Module Week 1 -->
+                                <div class="module">
+                                    <div class="module-header">
+                                        <i class="fa fa-angle-down"></i> Week 1 - CSS & HTML
+                                        <span class="module-icons float-end">
+                                            <i class="fa fa-check-circle text-success"></i>
+                                            <i class="fa fa-plus-circle"></i>
+                                            <i class="fa fa-ellipsis-h"></i>
+                                        </span>
+                                    </div>
+                                    <div class="module-content">
+                                        <div class="module-section">Learning Objectives <i
+                                                class="fa fa-check-circle text-success float-end"></i></div>
+                                        <div class="module-item">Basics of CSS <i
+                                                class="fa fa-check-circle text-success float-end"></i></div>
+                                        <div class="module-item">Basics of HTML <i
+                                                class="fa fa-check-circle text-success float-end"></i></div>
+                                        <div class="module-section">Labs<i
+                                                class="fa fa-check-circle text-success float-end"></i></div>
+                                        <div class="module-item"> Build your own shopping app<i
+                                                class="fa fa-check-circle text-success float-end"></i></div>
+                                        <div class="module-item"> Build your own portfolio<i
+                                                class="fa fa-check-circle text-success float-end"></i></div>
+
+
+                                    </div>
+                                </div>
+                                <!-- Additional modules can be added here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <!-- Course Status Column -->
+            <div class="flex-grow-0 me-2 d-none d-lg-block course-info-column">
+                <div class="course-info">
+                    <div class="d-flex justify-content-between">
+                        <button class="btn half-width-btn unpublish-btn"><i class="fa fa-ban"></i><span
+                                class="btn-text">Unpublish</span></button>
+                        <button class="btn half-width-btn publish-btn"><i class="fa fa-check-circle"></i><span
+                                class="btn-text">Published</span></button>
+
+                    </div>
+                    <!-- Additional buttons with icons -->
+                    <button class="btn btn-outline-secondary w-60 mb-1"><i class="fa fa-download"></i>
+                        Import existing content</button>
+                    <button class="btn btn-outline-secondary w-60 mb-1"><i class="fa fa-cloud-download"></i>
+                        Import from commons</button>
+                    <button class="btn btn-outline-secondary w-60 mb-1"><i class="fa fa-home"></i> Choose
+                        home page</button>
+                    <button class="btn btn-outline-secondary w-60 mb-1"><i class="fa fa-bar-chart"></i> View
+                        course stream</button>
+                    <button class="btn btn-outline-secondary w-60 mb-1"><i class="fa fa-bullhorn"></i> New
+                        announcement</button>
+                    <button class="btn btn-outline-secondary w-60 mb-1"><i class="fa fa-bar-chart"></i> New
+                        analytics</button>
+                    <button class="btn btn-outline-secondary w-60 mb-1"><i class="fa fa-bell"></i> View
+                        notifications</button>
+                </div>
+                <div class="course-info-second-col">
+                    <br>
+                    <h5>To Do</h5>
+                    <hr>
+                    <a href="#" class="text-danger">GRADE ENV1 - CSS + HTML</a>
+                </div>
+
+                <div class="course-info-second-col">
+                    <br>
+                    <h5>Coming Up</h5>
+                    <hr>
+                    <p class="text-danger">Lecture 1</p>
+                    <p class="text-secondary" style="font-size: smaller;">CS4550.12651.202410<br>Sep 11 at
+                        11:45 am</p>
+                    <p class="text-secondary" style="color:red">12 more in the next week...</p>
+                </div>
+            </div>
+        </div>
+    </div>    <link rel="stylesheet" href="../../../Navigation/index.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
