@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import { Provider } from "react-redux";
 import Nav from '../Nav';
 import KanbasNavigation from "./Navigation";
 import { Routes, Route, Navigate } from "react-router-dom";
 import Dashboard from "./Dashboard";
 import Courses from "./Courses";
+import store from "./store";
 import * as db from "./Database";
 import './index.css'; 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -13,17 +15,16 @@ function Kanbas() {
   const [course, setCourse] = useState({
     _id: "0", name: "New Course", number: "New Number",
     startDate: "2023-09-10", endDate: "2023-12-15",
-    image: "/images/reactjs.jpg"
+    image: "nlogo.png"
   });
 
   const addNewCourse = () => {
     const newCourse = { ...course, _id: new Date().getTime().toString() };
     setCourses([...courses, newCourse]);
-    // Optionally reset the course form to default values after adding a course
     setCourse({
       _id: "0", name: "New Course", number: "New Number",
       startDate: "2023-09-10", endDate: "2023-12-15",
-      image: "/images/reactjs.jpg"
+      image: "nlogo.png"
     });
   };
 
@@ -53,31 +54,35 @@ function Kanbas() {
   };
 
   return (
-    <div>
-      <Nav />
+    <Provider store={store}>
+      <div>
+        <Nav />
 
-      <div className="kanbas-container">
-      <div className="kanbas-navigation me-2 pe-4 flex-shrink-0">
-          <KanbasNavigation />
+        <div className="kanbas-container">
+          <div className="col-md-1 d-none d-md-flex kanbas-navigation pe-2 flex-shrink-0">
+            <KanbasNavigation />
+          </div>
+            <div className="col-10 kanbas-content me-2">
+            <Routes>
+              <Route path="/" element={<Navigate to="/Kanbas/Dashboard" />} />
+              <Route path="Dashboard" element={
+                <Dashboard
+                  courses={courses}
+                    course={course}
+                    setCourse={setCourse}
+                    addNewCourse={addNewCourse}
+                    deleteCourse={deleteCourse}
+                    updateCourse={updateCourse}
+                    editCourse={editCourse}
+
+                  />
+                } />
+              <Route path="Courses/:courseId/*" element={<Courses courses={courses} />} />
+            </Routes>
+          </div>
         </div>
-        <Routes>
-          <Route path="/" element={<Navigate to="/Kanbas/Dashboard" />} />
-          <Route path="Dashboard" element={
-            <Dashboard
-              courses={courses}
-                course={course}
-                setCourse={setCourse}
-                addNewCourse={addNewCourse}
-                deleteCourse={deleteCourse}
-                updateCourse={updateCourse}
-                editCourse={editCourse}
-
-              />
-            } />
-          <Route path="Courses/:courseId/*" element={<Courses courses={courses} />} />
-        </Routes>
       </div>
-    </div>
+    </Provider>
   );
 }
 

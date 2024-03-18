@@ -1,14 +1,28 @@
 import React from "react";
-import { FaCheckCircle, FaChevronDown, FaEdit, FaEllipsisV, FaGripVertical, FaPlusCircle } from "react-icons/fa";
+import { FaCheckCircle, FaChevronDown, FaEdit, FaEllipsisV, FaGripVertical, FaPlusCircle, FaTrash } from "react-icons/fa";
 import { Link, useParams } from "react-router-dom";
-import { assignments } from "../../Database";
+import { useSelector, useDispatch } from "react-redux";
+import { KanbasState } from "../../store";
+import { deleteAssignment } from './assignmentsReducer'
+
 import './index.css';
 
 function Assignments() {
   const { courseId } = useParams();
-  const assignmentList = assignments.filter(
+  const assignmentsList = useSelector((state: KanbasState) => state.assignmentsReducer.assignments);
+  const assignmentList = assignmentsList.filter(
     (assignment) => assignment.course === courseId
   );
+  const dispatch = useDispatch();
+
+  const handleDelete = (assignmentId:string) => {
+    // Confirm dialog
+    const isConfirmed = window.confirm("Are you sure you want to remove this assignment?");
+    if (isConfirmed) {
+      // Dispatch the delete action
+      dispatch(deleteAssignment(assignmentId));
+    }
+  };
   
   return (
     <>
@@ -17,7 +31,7 @@ function Assignments() {
           <input type="text" className="form-control w-25" placeholder="Search for Assignments" />
           <div className="float-end">
             <button className="btn btn-outline-secondary ml-2 me-1"><FaPlusCircle /> Group</button>
-            <button className="btn btn-red ml-2 me-1"><FaPlusCircle /> Assignment</button>
+            <Link className="btn btn-danger ml-2 me-1" to={`/Kanbas/Courses/${courseId}/Assignments/New`}><FaPlusCircle /> Assignment</Link>
             <button className="btn btn-outline-secondary ml-2"><FaEllipsisV /></button>
           </div>
         </div>
@@ -59,6 +73,7 @@ function Assignments() {
                     </div>
                   <span className="float-end">
                     <FaCheckCircle className="text-success" /><FaEllipsisV className="ms-2" />
+                    <FaTrash className="ms-2 text-danger" onClick={() => handleDelete(assignment._id)} style={{ cursor: 'pointer' }} />
                   </span>
                 </li>
               ))}
