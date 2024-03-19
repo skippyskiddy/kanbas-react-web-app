@@ -8,7 +8,6 @@ import Courses from "./Courses";
 import store from "./store";
 import * as db from "./Database";
 import './index.css'; 
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Kanbas() {
   const [courses, setCourses] = useState(db.courses);
@@ -49,7 +48,7 @@ function Kanbas() {
     setCourse({
       _id: "0", name: "New Course", number: "New Number",
       startDate: "2023-09-10", endDate: "2023-12-15",
-      image: "/images/reactjs.jpg"
+      image: "/nlogo.png"
     });
   };
 

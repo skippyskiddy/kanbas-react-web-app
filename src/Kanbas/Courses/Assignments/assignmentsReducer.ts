@@ -6,8 +6,11 @@ export const initialState = {
   assignments: assignments,
   assignment: { 
     title: "New Assignment",
-    points: "100"
-
+    points: '',
+    description: '',
+    dueDate: '',
+    availableFromDate: '',
+    availableUntilDate: '',
   },
 };
 

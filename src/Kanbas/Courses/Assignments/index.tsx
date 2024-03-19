@@ -68,7 +68,7 @@ function Assignments() {
                             {/* TODO: add due dates here */}
                             {/* <span className="text-secondary">Week 0 - SETUP - Week starting on Monday September 5th (9/5/2022)</span><br /> */}
                             <span className="text-danger">Multiple Modules</span>
-                            <span className="text-secondary"> | <strong>Due</strong> September 18, 2022 at 11:59 PM | 100 pts</span>
+                            <span className="text-secondary"> | <strong>Due</strong> {assignment.dueDate || "N/A"} | 100 pts</span>
                         </div>
                     </div>
                   <span className="float-end">

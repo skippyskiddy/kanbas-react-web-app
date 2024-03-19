@@ -61,7 +61,7 @@ function ModuleList() {
                 :
                 (
                   <div className="d-flex flex-column">
-                    <button className="btn btn-primary mb-2" onClick={() => dispatch(updateModule(module))}>Update</button>
+                    <button className="btn btn-primary mb-2" onClick={() => {dispatch(updateModule(module)); dispatch(resetModule());}}>Update</button>
                     <button className="btn btn-danger" onClick={() => dispatch(resetModule())}>Cancel</button>
                   </div>
                 )
@@ -76,7 +76,12 @@ function ModuleList() {
             .map(module => (
             <div key={module._id} className="module">
               <div className="module-header" onClick={() => toggleModule(module._id)}>
-                <FaAngleDown className={`fa-angle-down icons ${selectedModuleId === module._id ? 'rotate' : ''}`} /> {module.name}
+                <FaAngleDown className={`fa-angle-down icons ${selectedModuleId === module._id ? 'rotate' : ''}`} /> 
+                <p className="m-0">
+                  {module.name}
+                  <br />
+                  <span className="text-secondary">{module.description}</span>
+                </p>
                 <span className="module-icons float-end">
                   <FaCheckCircle className="text-success icons" />
                   <FaPlus className='icons'/>
