@@ -1,0 +1,52 @@
+
+[
+    {
+      "id": 1,
+      "courseId": "CS101",
+      "title": "Sample Quiz 1",
+      "published": true,
+      "questions": [
+        {
+          "id": 101,
+          "title": "Question 1",
+          "points": 5,
+          "type": "multiple_choice",
+          "text": "What is the capital of France?",
+          "options": ["Paris", "Berlin", "Madrid", "Lisbon"],
+          "correctAnswer": "Paris",
+          "status": "draft",
+          "blanks": {}
+        },
+        {
+          "id": 102,
+          "title": "Question 2",
+          "points": 3,
+          "type": "true_false",
+          "text": "The sky is blue.",
+          "correctAnswer": "True",
+          "status": "draft",
+          "blanks": {}
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "courseId": "CS102",
+      "title": "Quantum Physics Quiz",
+      "published": false,
+      "questions": [
+        {
+          "id": 201,
+          "title": "Question 1",
+          "points": 10,
+          "type": "multiple_choice",
+          "text": "Is Schrödinger's cat dead or alive?",
+          "options": ["Dead", "Alive", "Both", "Neither"],
+          "correctAnswer": "Both",
+          "status": "draft",
+          "blanks": {}
+        }
+      ]
+    }
+  ]
+

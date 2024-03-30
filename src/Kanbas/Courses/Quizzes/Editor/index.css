@@ -1,0 +1,16 @@
+.option-hover {
+    border: 1px solid transparent;
+    transition: border 0.3s ease;
+}
+
+.option-hover:hover {
+    border: 1px solid #ccc;
+}
+
+.arrow-button {
+    visibility: hidden;
+}
+
+.option-hover:hover .arrow-button {
+    visibility: visible;
+}

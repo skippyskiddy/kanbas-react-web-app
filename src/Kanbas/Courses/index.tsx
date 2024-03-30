@@ -4,6 +4,7 @@ import { FaBars } from 'react-icons/fa';
 import CourseNavigation from "./Navigation";
 import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/Editor";
+import Quizzes from "./Quizzes";
 import Grades from "./Grades";
 import Modules from "./Modules";
 import Home from "./Home";
@@ -46,6 +47,8 @@ function Courses({courses}: { courses: any[]}) {
                                 <Route path="Assignments/New" element={<AssignmentEditor />} />
                                 <Route path="Assignments/:assignmentId" element={<AssignmentEditor />} />
                                 <Route path="Grades" element={<Grades />} />
+                                <Route path="Quizzes/:quizId/edit" element={<Quizzes />} />
+
                             </Routes>
                         </div>
                     </div>

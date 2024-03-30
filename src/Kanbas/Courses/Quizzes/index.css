@@ -1,0 +1,40 @@
+.editor-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .editor-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-top: 1px solid #ccc;
+  }
+  
+  .editor-footer button {
+    margin-left: 0.5rem;
+  }
+  
+  .notify-checkbox {
+    margin-right: auto;
+  }
+
+.option-hover {
+  border: 1px solid transparent;
+  transition: border 0.3s ease;
+}
+
+.option-hover:hover {
+  border: 1px solid black;
+}
+
+.question-edit-button {
+    visibility: hidden;
+}
+
+.option-hover:hover .question-edit-button {
+    visibility: visible;
+}
