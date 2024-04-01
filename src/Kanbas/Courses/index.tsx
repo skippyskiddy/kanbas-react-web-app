@@ -10,11 +10,27 @@ import Home from "./Home";
 import './index.css';
 
 
-function Courses({courses}: { courses: any[]}) {
-    const { courseId } = useParams<{ courseId: string }>();
-    const { pathname } = useLocation();
-    const course = courses.find((course) => course._id === courseId);
+import { useState, useEffect } from "react";
+import axios from "axios";
 
+function Courses() {
+    const { courseId } = useParams();
+    const COURSES_API = "http://localhost:4000/api/courses";
+
+    const [course, setCourse] = useState<any>({ _id: "" });
+    const findCourseById = async (courseId?: string) => {
+      const response = await axios.get(
+        `${COURSES_API}/${courseId}`
+      );
+      setCourse(response.data);
+    };
+  
+
+    const { pathname } = useLocation();
+    useEffect(() => {
+        findCourseById(courseId);
+      }, [courseId]);
+    
     return (
         <div>
             <div className="courseStyle">

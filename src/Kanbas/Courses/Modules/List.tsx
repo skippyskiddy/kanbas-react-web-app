@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from "react-redux";
 import {
@@ -7,13 +7,45 @@ import {
   updateModule,
   setModule,
   resetModule,
+  setModules,
 } from "./modulesReducer";
 import { FaAngleDown, FaCheckCircle, FaPlus, FaEllipsisV, FaTrash, FaEdit } from 'react-icons/fa';
 import './index.css';
 import { KanbasState } from '../../store';
 
+import * as client from "./service";
+
+
 function ModuleList() {
+
+  const handleDeleteModule = (moduleId: string) => {
+    client.deleteModule(moduleId).then((status) => {
+      dispatch(deleteModule(moduleId));
+    });
+  };
+
   const { courseId } = useParams();
+  useEffect(() => {
+    client.findModulesForCourse(courseId)
+      .then((modules) =>
+        dispatch(setModules(modules))
+    );
+  }, [courseId]);
+
+  const handleAddModule = () => {
+    client.createModule(courseId, module).then((module) => {
+      dispatch(addModule(module));
+    });
+  };
+
+    const handleUpdateModule = async () => {
+    const status = await client.updateModule(module);
+    dispatch(updateModule(module));
+    dispatch(resetModule());
+  };
+
+
+
   const [selectedModuleId, setSelectedModuleId] = useState<string | null>(null);
   const moduleList = useSelector((state: KanbasState) => 
   state.modulesReducer.modules);
@@ -57,11 +89,11 @@ function ModuleList() {
             <div>
               {
                 !module._id ?
-                <button className="btn btn-success me-2" onClick={() => dispatch(addModule({ ...module, course: courseId }))}>Add</button>
+                <button className="btn btn-success me-2" onClick={handleAddModule}> Add</button>
                 :
                 (
                   <div className="d-flex flex-column">
-                    <button className="btn btn-primary mb-2" onClick={() => {dispatch(updateModule(module)); dispatch(resetModule());}}>Update</button>
+                    <button className="btn btn-primary mb-2" onClick={handleUpdateModule}>Update</button>
                     <button className="btn btn-danger" onClick={() => dispatch(resetModule())}>Cancel</button>
                   </div>
                 )
@@ -87,7 +119,7 @@ function ModuleList() {
                   <FaPlus className='icons'/>
                   <button
                     className="btn mx-0 px-0"
-                    onClick={() => dispatch(deleteModule(module._id))}
+                    onClick={() => handleDeleteModule(module._id)}
                   >
                     <FaTrash className="icons"/>
                   </button>
