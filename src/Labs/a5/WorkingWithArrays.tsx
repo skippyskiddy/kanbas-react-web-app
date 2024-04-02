@@ -84,7 +84,7 @@ function WorkingWithArrays() {
             <div className="d-flex flex-column w-25 ">
                 <input className="form-control mb-2" type="number" value={todo.id}
                     onChange={(e) => setTodo({
-                        ...todo, id: parseInt(e.target.value)
+                        ...todo, id: parseInt(e.target.value || '0')
                     })} />
                 <input className="form-control mb-2" type="text" value={todo.title}
                     onChange={(e) => setTodo({
