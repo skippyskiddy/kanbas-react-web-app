@@ -5,7 +5,7 @@ const API_BASE = process.env.REACT_APP_API_BASE;
 
 
 function WorkingWithArrays() {
-    const API = `${API_BASE}/api/courses/a5/todos`;
+    const API = `${API_BASE}/a5/todos`;
 
     const [todo, setTodo] = useState({
         id: 1,
