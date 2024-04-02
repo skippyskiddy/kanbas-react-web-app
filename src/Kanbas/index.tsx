@@ -47,11 +47,7 @@ function Kanbas() {
       setCourses(prevCourses => [response.data, ...prevCourses]);
 
       // Reset the course form or perform other actions as needed
-      setCourse({
-        _id: "0", name: "New Course", number: "New Number",
-        startDate: "2023-09-10", endDate: "2023-12-15",
-        image: "nlogo.png"
-      });
+      resetForm();
     } catch (error) {
       console.error("Failed to add the course", error);
       // Handle the error 
