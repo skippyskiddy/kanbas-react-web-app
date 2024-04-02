@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
+const API_BASE = process.env.REACT_APP_API_BASE;
+
+
 function WorkingWithObjects() {
 
     const [module, setModule] = useState({
@@ -8,7 +11,7 @@ function WorkingWithObjects() {
         description: "Learn the basics of React, including components, state, and props.",
         course: "Web Development"
     });
-    const MODULE_URL = "http://localhost:4000/a5/module";
+    const MODULE_URL = `${API_BASE}/api/courses/a5/module`;
 
 
     const [assignment, setAssignment] = useState({
@@ -16,7 +19,7 @@ function WorkingWithObjects() {
         description: "Create a NodeJS server with ExpressJS",
         due: "2021-10-10", completed: false, score: 0,
     });
-    const ASSIGNMENT_URL = "http://localhost:4000/a5/assignment"
+    const ASSIGNMENT_URL = `${API_BASE}/api/courses/a5/assignment`
 
     const fetchAssignment = async () => {
         const response = await axios.get(`${ASSIGNMENT_URL}`);
@@ -63,22 +66,22 @@ function WorkingWithObjects() {
                 value={assignment.title} />
 
             <h4>Retrieving Objects</h4>
-            <a href="http://localhost:4000/a5/assignment">
+            <a href={`${API_BASE}/api/courses/a5/assignment`}>
                 <button className="btn btn-primary">Get Assignment</button>
             </a>
 
             <h4>Retrieving Properties</h4>
-            <a href="http://localhost:4000/a5/assignment/title">
+            <a href={`${API_BASE}/api/courses/a5/assignment/title`}>
                 <button className="btn btn-primary">Get Title</button>
             </a>
 
             <h4>Get Module</h4>
-            <a href="http://localhost:4000/a5/module">
+            <a href={`${API_BASE}/api/courses/a5/module`}>
                 <button className="btn btn-primary">Get Module</button>
             </a>
 
             <h4>Get Module Name</h4>
-            <a href="http://localhost:4000/a5/module/name">
+            <a href={`${API_BASE}/api/courses/a5/module/name`}>
                 <button className="btn btn-primary">Get Module Name </button>
             </a>
 
@@ -106,7 +109,7 @@ function WorkingWithObjects() {
                     <input type="text" className="form-control-sm"
                         onChange={(e) => setAssignment({
                             ...assignment,
-                            score: parseInt(e.target.value)
+                            score: parseInt(e.target.value || '0')
                         })}
                         value={assignment.score} />
                 </div>

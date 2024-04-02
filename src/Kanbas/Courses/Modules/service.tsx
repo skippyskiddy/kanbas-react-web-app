@@ -1,8 +1,10 @@
 import axios from "axios";
-const COURSES_API = "http://localhost:4000/api/courses";
 
+const API_BASE = process.env.REACT_APP_API_BASE;
 
-const MODULES_API = "http://localhost:4000/api/modules";
+const COURSES_API = `${API_BASE}/api/courses`;
+
+const MODULES_API = `${API_BASE}/api/modules`;
 
 export const deleteModule = async (moduleId:any) => {
   const response = await axios
