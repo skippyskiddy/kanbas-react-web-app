@@ -4,50 +4,80 @@ import { useSelector, useDispatch } from "react-redux";
 import { addAssignment, setAssignment, updateAssignment, initialState } from "../assignmentsReducer";
 import { KanbasState } from "../../../store";
 import { useEffect } from "react";
+import * as service from "../service";
+
+
 
 function AssignmentEditor() {
     const { assignmentId, courseId } = useParams();
     const dispatch = useDispatch();
+    const navigate = useNavigate();
+
 
     const assignments = useSelector((state: KanbasState) => state.assignmentsReducer.assignments);
     const assignment = useSelector((state: KanbasState) => state.assignmentsReducer.assignment);
 
+    // useEffect(() => {
+    //     let editAssignment;
+    //     if (assignmentId) {
+    //         // Find the assignment by ID
+    //         editAssignment = assignments.find((assignment) => assignment._id === assignmentId);
+    
+    //         // Check if the assignment exists and if certain fields like 'points' are not defined
+    //         if (editAssignment) {
+    //             editAssignment = {
+    //                 ...editAssignment,
+    //                 points: editAssignment.points ?? '',
+    //                 description: editAssignment.description ?? '',
+    //                 dueDate: editAssignment.dueDate ?? '',
+    //                 availableFromDate: editAssignment.availableFromDate ?? '',
+    //                 availableUntilDate: editAssignment.availableUntilDate ?? '',
+    //             };
+    //         }
+    //     } else {
+    //         // For a new assignment, use the initialState.assignment but ensure defaults for all fields
+    //         editAssignment = { 
+    //             ...initialState.assignment,
+    //         };
+    //     }
+    
+    //     dispatch(setAssignment(editAssignment));
+    // }, []);
+
     useEffect(() => {
-        let editAssignment;
         if (assignmentId) {
-            // Find the assignment by ID
-            editAssignment = assignments.find((assignment) => assignment._id === assignmentId);
-    
-            // Check if the assignment exists and if certain fields like 'points' are not defined
-            if (editAssignment) {
-                editAssignment = {
-                    ...editAssignment,
-                    points: editAssignment.points ?? '',
-                    description: editAssignment.description ?? '',
-                    dueDate: editAssignment.dueDate ?? '',
-                    availableFromDate: editAssignment.availableFromDate ?? '',
-                    availableUntilDate: editAssignment.availableUntilDate ?? '',
-                };
-            }
+            service.findAssignmentById(assignmentId)
+                .then(data => {
+                    dispatch(setAssignment(data));
+                })
+                .catch(error => console.error("Failed to fetch assignment details:", error));
         } else {
-            // For a new assignment, use the initialState.assignment but ensure defaults for all fields
-            editAssignment = { 
-                ...initialState.assignment,
-            };
+            // Reset to initial state if creating a new assignment
+            dispatch(setAssignment(initialState.assignment));
         }
-    
-        dispatch(setAssignment(editAssignment));
-    }, []);
+    }, [assignmentId, dispatch]);
     
 
-    const navigate = useNavigate();
+    // const handleSave = () => {
+    //     if (!assignmentId) {
+    //         dispatch(addAssignment({ ...assignment, course: courseId }));
+    //     } else {
+    //         dispatch(updateAssignment(assignment));
+    //     }
+    //     navigate(`/Kanbas/Courses/${courseId}/Assignments`);
+    // };
+
     const handleSave = () => {
-        if (!assignmentId) {
-            dispatch(addAssignment({ ...assignment, course: courseId }));
-        } else {
-            dispatch(updateAssignment(assignment));
-        }
-        navigate(`/Kanbas/Courses/${courseId}/Assignments`);
+        const saveOrUpdateAssignment = assignmentId
+            ? service.updateAssignment(assignment)
+            : service.createAssignment(courseId as any, assignment);
+    
+        saveOrUpdateAssignment.then(savedAssignment => {
+            assignmentId
+                ? dispatch(updateAssignment(savedAssignment))
+                : dispatch(addAssignment(savedAssignment));
+            navigate(`/Kanbas/Courses/${courseId}/Assignments`);
+        }).catch(error => console.error("Saving or updating assignment failed:", error));
     };
     return (
         <div>

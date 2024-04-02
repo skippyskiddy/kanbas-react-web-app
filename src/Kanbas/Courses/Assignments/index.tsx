@@ -1,28 +1,45 @@
-import React from "react";
-import { FaCheckCircle, FaChevronDown, FaEdit, FaEllipsisV, FaGripVertical, FaPlusCircle, FaTrash } from "react-icons/fa";
-import { Link, useParams } from "react-router-dom";
+import React, { useEffect } from 'react';
+import { FaCheckCircle, FaChevronDown, FaEdit, FaEllipsisV, FaGripVertical, FaPlusCircle, FaTrash, FaUnderline } from "react-icons/fa";
+import { Link, useParams } from "react-router-dom"; 
 import { useSelector, useDispatch } from "react-redux";
 import { KanbasState } from "../../store";
-import { deleteAssignment } from './assignmentsReducer'
+import { deleteAssignment, setAssignments } from './assignmentsReducer'
+
+import * as client from "./service";
+
 
 import './index.css';
 
 function Assignments() {
   const { courseId } = useParams();
-  const assignmentsList = useSelector((state: KanbasState) => state.assignmentsReducer.assignments);
-  const assignmentList = assignmentsList.filter(
-    (assignment) => assignment.course === courseId
-  );
   const dispatch = useDispatch();
 
-  const handleDelete = (assignmentId:string) => {
-    // Confirm dialog
+  const assignmentsList = useSelector((state: KanbasState) => state.assignmentsReducer.assignments);
+
+  useEffect(() => {
+    client.findAssignmentsForCourse(courseId as string)
+      .then((assignments) => {
+        dispatch(setAssignments(assignments)); 
+      })
+      .catch((error) => {
+        console.error("Failed to fetch assignments:", error);
+      });
+  }, [courseId]);
+
+
+  const handleDelete = async (assignmentId: string) => {
     const isConfirmed = window.confirm("Are you sure you want to remove this assignment?");
     if (isConfirmed) {
-      // Dispatch the delete action
-      dispatch(deleteAssignment(assignmentId));
+      try {
+        await client.deleteAssignment(assignmentId);
+        dispatch(deleteAssignment(assignmentId)); 
+      } catch (error) {
+        console.error("Failed to delete assignment:", error);
+      }
     }
   };
+
+
   
   return (
     <>
@@ -54,7 +71,7 @@ function Assignments() {
             </div>
           </div>
           <ul className="list-group list-group-flush">
-              {assignmentList.map((assignment) => (
+              {assignmentsList.map((assignment) => (
                 <li className="list-group-item justify-content-between" key={assignment._id}>
                     <div className="d-flex align-items-center">
                         <div className="d-flex align-items-center">
@@ -68,7 +85,7 @@ function Assignments() {
                             {/* TODO: add due dates here */}
                             {/* <span className="text-secondary">Week 0 - SETUP - Week starting on Monday September 5th (9/5/2022)</span><br /> */}
                             <span className="text-danger">Multiple Modules</span>
-                            <span className="text-secondary"> | <strong>Due</strong> {assignment.dueDate || "N/A"} | 100 pts</span>
+                            <span className="text-secondary"> | <strong>Due</strong> {assignment.dueDate || "N/A"} | {assignment.points || "100"} pts</span>
                         </div>
                     </div>
                   <span className="float-end">
