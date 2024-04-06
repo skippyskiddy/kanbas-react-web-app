@@ -60,6 +60,25 @@ const QuestionEditor: React.FC<QuestionEditorProps> = ({
             correctAnswer,
             blanks,
         }
+        if (!text) {
+            throw new Error("Please add question text")
+        }
+        if (type === 'fill_in_blanks') {
+            if (!(Object.keys(blanks).length)) {
+                throw new Error ('Please add possible answers');
+            }
+
+            Object.values(blanks).forEach(option => { if (!option.length) { throw new Error ('Please add possible options') } });
+        }
+
+        if (type !== 'fill_in_blanks') { 
+            if (correctAnswer === '') { 
+                throw new Error ('Please select a correct answer');
+                return;
+        }
+        
+            options.forEach(option => { if (!option) { throw new Error ('Please add option text') } });
+        }
 
         handleSaveQuestion(newQuestionData);
     }

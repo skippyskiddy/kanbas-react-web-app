@@ -34,15 +34,13 @@ const MultipleChoiceEditor: React.FC<MultipleChoiceQuestionProps> = ({
         {options?.map((option, index) => (
           <div key={index} className="d-flex justify-content-between mb-3 p-2 option-hover">
             <div className="d-flex align-items-center">
-
-              { option === correctAnswer ?
+              { option !== '' && option === correctAnswer ?
                 <button className="btn btn-success me-2 my-0 py-0" disabled><FaArrowRight /></button>
                 :
-                // todo: make hover
                 <button className="btn btn-success me-2 my-0 py-0 arrow-button" onClick={() => setCorrectAnswer(option)}><FaArrowRight /></button>
               }
               <div>
-                <label className="form-label me-2 my-0 py-0">{option === correctAnswer ? "Correct answer" : "Possible answer"}:</label>
+                <label className="form-label me-2 my-0 py-0">{option !== '' && option === correctAnswer ? "Correct answer" : "Possible answer"}:</label>
                 <input
                   type="text"
                   value={option}

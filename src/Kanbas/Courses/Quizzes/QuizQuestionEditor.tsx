@@ -69,12 +69,18 @@ const QuizQuestionEditor = () => {
       title: newQuestion.title || 'Untitled Question', // Ensure a title is set
       points: newQuestion.points || 1, // Ensure points are set
     };
+    setEditingQuestionIndex(editingQuestions.length);
     setEditingQuestions([...editingQuestions, questionWithStatus]);
+    setEditingQuestion({...questionWithStatus});
+    setEditingQuestionId(questionWithStatus.id);
     setNewQuestion(defaultNewQuestion); // Reset the form to default values
-    handleEditQuestion(questionWithStatus.id, editingQuestions.length - 1);
   };
 
   const handleEditQuestion = (questionId: number | undefined, index: number) => {
+    if (!questionId) {
+      return;
+    }
+
     const q = editingQuestions.find(q => q.id === questionId);
     
     if (!q) {
@@ -113,10 +119,7 @@ const QuizQuestionEditor = () => {
     if (!questionId) {
       return;
     }
-    dispatch(deleteQuestion({
-      quizId: quiz.id,
-      questionId: questionId,
-    }));
+    setEditingQuestions(editingQuestions.filter(q => q.id !== questionId));
   };
 
   const handleCancelEdit = () => {
