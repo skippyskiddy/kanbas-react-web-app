@@ -1,16 +1,21 @@
 body {
     --bs-breadcrumb-divider: '>';
+    margin: 0;
+    padding: 0;
+    font-size: 0.8em;
 }
 
 .kanbas-container {
     display: flex;
     height: 100vh; 
     overflow: hidden; 
+    box-sizing: border-box;
   }
   
   .kanbas-navigation {
     flex: 0 1 auto;
     overflow-y: auto; 
+    width: fit-content;
   }
   
   .kanbas-content {

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Navigate, Route, Routes, useParams, useLocation } from 'react-router-dom';
 import { FaBars } from 'react-icons/fa';
-import { courses } from '../Database';
 import CourseNavigation from "./Navigation";
 import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/Editor";
@@ -11,7 +10,7 @@ import Home from "./Home";
 import './index.css';
 
 
-function Courses() {
+function Courses({courses}: { courses: any[]}) {
     const { courseId } = useParams<{ courseId: string }>();
     const { pathname } = useLocation();
     const course = courses.find((course) => course._id === courseId);
@@ -44,6 +43,7 @@ function Courses() {
                                 <Route path="Modules" element={<Modules />} />
                                 <Route path="Piazza" element={<h1>Piazza</h1>} />
                                 <Route path="Assignments" element={<Assignments/>} />
+                                <Route path="Assignments/New" element={<AssignmentEditor />} />
                                 <Route path="Assignments/:assignmentId" element={<AssignmentEditor />} />
                                 <Route path="Grades" element={<Grades />} />
                             </Routes>
