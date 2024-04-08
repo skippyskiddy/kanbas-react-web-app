@@ -7,6 +7,9 @@ import AssignmentEditor from "./Assignments/Editor";
 import Quizzes from "./Quizzes";
 import Grades from "./Grades";
 import Modules from "./Modules";
+import QuizDisplay from "./Quizzes/Elizabeth";
+import QuizDetailsEditor from './Quizzes/Elizabeth/DetailsEditor';
+import QuizDetails from './Quizzes/Elizabeth/Details';
 import Home from "./Home";
 import './index.css';
 
@@ -48,6 +51,10 @@ function Courses({courses}: { courses: any[]}) {
                                 <Route path="Assignments/:assignmentId" element={<AssignmentEditor />} />
                                 <Route path="Grades" element={<Grades />} />
                                 <Route path="Quizzes/:quizId/edit" element={<Quizzes />} />
+                                <Route path="Quizzes" element={<QuizDisplay/>} />
+                                <Route path="Quizzes/DetailsEditor/:quizId" element={<QuizDetailsEditor/>}/>
+                                <Route path="Quizzes/QuizDetails/:quizId" element={<QuizDetails/>}/>
+
 
                             </Routes>
                         </div>

@@ -1,0 +1,83 @@
+.wd-add-quiz {
+    margin: 5px; 
+    background-color: red; 
+    color: white; 
+    border-color: red;
+}
+
+.wd-nowrap {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.wd-quizSection, .wd-quizSection * {
+    border-radius: 0%;
+    border: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.wd-quizSection {
+    margin: 5px;
+}
+
+.wd-quizSection > li {
+    background-color: lightgray;
+    border: 1px solid gray !important;
+}
+
+.wd-quizSection > li > div {
+    padding: 6px;
+}
+
+.wd-quizSection > li > ul > li {
+    padding: 5px;
+    border-top: 1px solid gray !important;
+}
+
+.wd-publishedQuiz {
+    border-left: 2px solid green;
+}
+
+.wd-quizSection > li {
+    margin-bottom: 20px;
+    display: block;
+}
+
+.wd-quiz a {
+    color:black;
+    text-decoration: none;
+}
+
+.wd-float-done {
+    clear: both;
+}
+
+.wd-percentage-label {
+    margin-right: 10px;
+    border-style: solid;
+    border-radius: 18px;
+    background-color: buttonface;
+    border-color: buttonborder;
+    color: black;
+    border-width: thin;
+    padding: 3px;
+}
+
+.wd-pencil-paper {
+    color: green;
+    padding-right: 5px;
+    font-size: x-large;
+}
+
+.wd-week-span {
+    font-size: 14px;
+    padding-left: 40px;
+}
+
+.wd-three-dot-menu {
+    border-style: solid;
+    border-radius: 6px;
+    border-width: thin;
+}

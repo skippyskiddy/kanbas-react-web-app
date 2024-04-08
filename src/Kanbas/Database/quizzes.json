@@ -1,52 +1,63 @@
-
 [
-    {
-      "id": 1,
-      "courseId": "CS101",
-      "title": "Sample Quiz 1",
-      "published": true,
-      "questions": [
-        {
-          "id": 101,
-          "title": "Question 1",
-          "points": 5,
-          "type": "multiple_choice",
-          "text": "What is the capital of France?",
-          "options": ["Paris", "Berlin", "Madrid", "Lisbon"],
-          "correctAnswer": "Paris",
-          "status": "draft",
-          "blanks": {}
-        },
-        {
-          "id": 102,
-          "title": "Question 2",
-          "points": 3,
-          "type": "true_false",
-          "text": "The sky is blue.",
-          "correctAnswer": "True",
-          "status": "draft",
-          "blanks": {}
-        }
+  { 
+      "id": 1, "title": "Sample Quiz 1",
+       "subtitle": "Week 0 - Quiz", 
+      "instructions": "<p>Quiz instructions 1</p>", "quizType": "Practice Quiz", 
+      "assignmentGroup": "QUIZZES", "shuffle": false, "timeLimit": false, "time": "30", "multipleAttempts": false, "showCorrectAnswers": false,
+      "showCorrectAnswersDate": "2024-04-05", "hideCorrectAnswersDate": "2024-01-01", "accessCodeOn": false, "accessCode": "", "viewResponses": false,
+      "oneQuestion": false, "webCam": false, "lockedQuestions": false,
+      "forAccess": "Everyone", "dueDate": "2024-03-19", "availableFromDate": "2024-03-05", 
+      "untilDate": "2024-04-01", "points": "100", "numQuestions": "11", "published": false, "course": "CS101", "questions":
+       [
+          {
+              "id": 101,
+              "title": "Question 1",
+              "points": 5,
+              "type": "multiple_choice",
+              "text": "What is the capital of France?",
+              "options": ["Paris", "Berlin", "Madrid", "Lisbon"],
+              "correctAnswer": "Paris",
+              "status": "draft",
+              "blanks": {}
+            },
+            {
+              "id": 102,
+              "title": "Question 2",
+              "points": 3,
+              "type": "true_false",
+              "text": "The sky is blue.",
+              "correctAnswer": "True",
+              "status": "draft",
+              "blanks": {}
+            }
+            
       ]
-    },
-    {
-      "id": 2,
-      "courseId": "CS102",
-      "title": "Quantum Physics Quiz",
-      "published": false,
-      "questions": [
-        {
-          "id": 201,
-          "title": "Question 1",
-          "points": 10,
-          "type": "multiple_choice",
-          "text": "Is Schrödinger's cat dead or alive?",
-          "options": ["Dead", "Alive", "Both", "Neither"],
-          "correctAnswer": "Both",
-          "status": "draft",
-          "blanks": {}
-        }
-      ]
-    }
-  ]
+  },
+
+
+
+  { 
+      "id": 2,"title": "Quantum Physics Quiz",
+      "subtitle": "Week 1 - Quiz", 
+      "instructions": "<p>Quiz instructions 2</p>", "quizType": "Practice Quiz", 
+      "assignmentGroup": "QUIZZES", "shuffle": true, "timeLimit": true, "time": "20", "multipleAttempts": false, "showCorrectAnswers": true,
+      "showCorrectAnswersDate": "2024-03-18", "hideCorrectAnswersDate": "2024-01-01", "accessCodeOn": false, "accessCode": "", "viewResponses": false,
+      "oneQuestion": true, "webCam": false, "lockedQuestions": true,
+      "forAccess": "Everyone", "dueDate": "2024-03-10", "availableFromDate": "2024-03-01", 
+      "untilDate": "2024-03-16", "points": "200", "numQuestions": "7", "published": true, "course": "CS102", "questions": [
+          {
+            "id": 201,
+            "title": "Question 1",
+            "points": 10,
+            "type": "multiple_choice",
+            "text": "Is Schrödinger's cat dead or alive?",
+            "options": ["Dead", "Alive", "Both", "Neither"],
+            "correctAnswer": "Both",
+            "status": "draft",
+            "blanks": {}
+          }
+        ]
+  }
+]
+
 

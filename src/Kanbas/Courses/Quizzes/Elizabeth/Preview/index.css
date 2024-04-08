@@ -1,0 +1,29 @@
+.wd-warning-message {
+    color: rgb(199, 3, 3);
+    background-color: rgba(232, 178, 178, 0.877);
+    border-radius: 8px;
+    padding: 10px;
+    margin: 2px;
+}
+
+.wd-section {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-right: 2px;
+}
+
+.wd-end-section {
+    border-style: solid;
+    border-width: 1px;
+    border-color: buttonborder; 
+    outline: 1px solid;
+    border: thin;
+    display: flex;
+}
+
+.wd-extra-section {
+    flex-grow: 3;
+}
