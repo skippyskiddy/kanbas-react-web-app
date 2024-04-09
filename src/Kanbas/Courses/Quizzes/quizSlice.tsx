@@ -97,7 +97,7 @@ export interface Quiz {
   numQuestions: string;
   published: boolean;
   questions: NewQuestionTemplate[];
-  courseId?: string;
+  course?: string;
 }
 
 export interface NewQuestionTemplate {
@@ -173,6 +173,7 @@ const quizSlice = createSlice({
 
     selectQuizzes: (state, action) => {
       state.quizzes = action.payload;
+      console.log(state.quizzes);
     },
 
     // addQuiz reducer function, action contains new quiz in action.payload. Overide _id as timestamp

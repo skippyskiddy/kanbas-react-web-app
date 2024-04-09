@@ -112,10 +112,9 @@ function QuizDisplay() {
                     </div>
 
                     <ul className="list-group">
-                        {quizzesListFromReducer.filter((quiz) => quiz.courseId === courseId).map((quiz) => (
+                        {quizzesListFromReducer.filter((quiz) => quiz.course === courseId).map((quiz) => (
                             <li id={quiz.id?.toString()} key={quiz.id} className={quiz.published ? "list-group-item wd-quiz wd-publishedQuiz" : "list-group-item wd-quiz" } onClick={() => selectQuiz(quiz)} draggable="true">
                                 {quiz.published ? <IoRocketOutline className="ms-2 me-3" style={{color: "green"}}/> : <IoRocketOutline className="ms-2 me-3" style={{color: "grey"}}/>}
-
                                 <span className="float-end">
                                     {quiz.published ? <button style={{backgroundColor: "unset"}} onClick={() => handlePublish(quiz)}><FaCheckCircle className="text-success"/></button> : <button style={{backgroundColor: "unset"}} onClick={() => handlePublish(quiz)}><FiSlash/></button>}
                                     
