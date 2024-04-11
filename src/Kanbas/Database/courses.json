@@ -1,6 +1,6 @@
 [
   {
-    "_id": "CS101",
+    "_id": 101,
     "name": "Debugging with Beetles",
     "number": "RS4550",
     "startDate": "2023-01-10",
@@ -8,7 +8,7 @@
     "image": "beetle.png"
   },
   {
-    "_id": "CS102",
+    "_id": 102,
     "name": "Quantum Physics for Cat Enthusiasts",
     "number": "RS4560",
     "startDate": "2023-01-10",
@@ -16,7 +16,7 @@
     "image": "quantumcat.png"
   },
   {
-    "_id": "CS103",
+    "_id": 103,
     "name": "Computer Science",
     "number": "RS4570",
     "startDate": "2023-01-10",
@@ -24,7 +24,7 @@
     "image": "cs.png"
   },
 {
-  "_id": "CS104",
+  "_id": 104,
   "name": "Algorithm Optimization",
   "number": "RS4580",
   "startDate": "2023-01-10",
@@ -32,7 +32,7 @@
   "image": "algorithm.png"
 },
 {
-  "_id": "CS105",
+  "_id": 105,
   "name": "The Cat's Guide to Software Engineering",
   "number": "RS4590",
   "startDate": "2023-10-10",
@@ -40,7 +40,7 @@
   "image": "softwarecat.png"
 },
 {
-  "_id": "CS106",
+  "_id": 106,
   "name": "Quantum Computation",
   "number": "RS4600",
   "startDate": "2023-01-10",
@@ -48,7 +48,7 @@
   "image": "quantumcomputer.png"
 },
 {
-  "_id": "CS107",
+  "_id": 107,
   "name": "Hunting Bugs: A Cat's Perspective",
   "number": "RS4610",
   "startDate": "2023-01-10",

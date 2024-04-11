@@ -6,6 +6,8 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import Dashboard from "./Dashboard";
 import Courses from "./Courses";
 import store from "./store";
+import Account from "./Account";
+
 
 import axios from "axios";
 import './index.css'; 
@@ -108,6 +110,7 @@ function Kanbas() {
             <div className="col-10 kanbas-content me-2">
             <Routes>
               <Route path="/" element={<Navigate to="/Kanbas/Dashboard" />} />
+              <Route path="/Account/*" element={<Account />} />
               <Route path="Dashboard" element={
                 <Dashboard
                   courses={courses}
