@@ -5,8 +5,8 @@ import './index.css';
 
 function Grades() {
     const { courseId } = useParams();
-    const as = assignments.filter((assignment) => assignment.course === parseInt(courseId || '0'));
-    const es = enrollments.filter((enrollment) => enrollment.course === parseInt(courseId || '0'));
+    const as = assignments.filter((assignment) => assignment.course === courseId || '0');
+    const es = enrollments.filter((enrollment) => enrollment.course === courseId || '0');
     return (
         <div>
             {/* <h1>Grades</h1> */}

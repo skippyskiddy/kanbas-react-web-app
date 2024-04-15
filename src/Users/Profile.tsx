@@ -18,6 +18,11 @@ export default function Profile() {
     await client.updateUser(profile);
   };
 
+  const signout = async () => {
+    await client.signout();
+    navigate("/Kanbas/Account/Signin");
+  };
+
   useEffect(() => {
     fetchProfile();
   }, []);
@@ -51,6 +56,7 @@ export default function Profile() {
           </select>
 
           <button className="btn btn-primary" onClick={save}> Save </button> 
+          <button className="btn btn-danger"  onClick={signout}> Signout</button>
 
         </div>
       )}
