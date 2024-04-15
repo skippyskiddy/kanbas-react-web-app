@@ -14,10 +14,9 @@ const modulesSlice = createSlice({
     setModules: (state, action) => {
       state.modules = action.payload;
     },
-
     addModule: (state, action) => {
       state.modules = [
-        { ...action.payload, _id: new Date().getTime() },
+        { ...action.payload },
           ...state.modules,
       ];
     },

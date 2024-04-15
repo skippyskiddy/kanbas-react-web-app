@@ -25,17 +25,21 @@ function ModuleList() {
   };
 
   const { courseId } = useParams();
-  useEffect(() => {
+  const fetchModules = async () => {
     client.findModulesForCourse(courseId)
       .then((modules) =>
         dispatch(setModules(modules))
     );
+  };
+
+  useEffect(() => {
+    fetchModules();
   }, [courseId]);
 
   const handleAddModule = () => {
     client.createModule(courseId, module).then((module) => {
       dispatch(addModule(module));
-    });
+    })
   };
 
     const handleUpdateModule = async () => {

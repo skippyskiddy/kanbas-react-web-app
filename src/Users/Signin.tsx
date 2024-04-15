@@ -12,13 +12,44 @@ export default function Signin() {
     navigate("/Kanbas/Account/Profile");
   };
   return (
-    <div>
-      <h1>Signin</h1>
-      <input value={credentials.username} onChange={(e) =>
-        setCredentials({ ...credentials, username: e.target.value })}/>
-      <input value={credentials.password} onChange={(e) =>
-        setCredentials({ ...credentials, password: e.target.value })}/>
-    <button className="btn btn-primary" onClick={signin}>Signin</button>
+
+    <div className="container mt-5"> 
+  <div className="row justify-content-center"> 
+    <div className="col-md-6">
+      <h1 className="mb-3 text-center">Signin</h1> 
+      <form>
+        <div className="mb-3"> 
+          <input 
+            type="text" 
+            className="form-control" 
+            placeholder="Username" 
+            value={credentials.username} 
+            onChange={(e) => setCredentials({ ...credentials, username: e.target.value })}
+          />
+        </div>
+        <div className="mb-3">
+          <input 
+            type="password" 
+            className="form-control" 
+            placeholder="Password" 
+            value={credentials.password} 
+            onChange={(e) => setCredentials({ ...credentials, password: e.target.value })}
+          />
+        </div>
+        <div className="d-grid gap-2"> 
+          <button 
+            className="btn btn-primary" 
+            type="button" 
+            onClick={signin}
+          >
+            Signin
+          </button>
+        </div>
+      </form>
     </div>
+  </div>
+</div>
+
+    
   );
 }

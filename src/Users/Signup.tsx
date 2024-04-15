@@ -3,25 +3,55 @@ import { useNavigate } from "react-router-dom";
 import * as client from "./client";
 export default function Signup() {
   const [error, setError] = useState("");
-  const [user, setUser] = useState({ username: "", password: "" });
+  const [credentials, setCredentials] = useState<client.User>({ _id: "",
+    username: "", password: "", firstName: "", lastName: "", role: "USER"
+  });
   const navigate = useNavigate();
   const signup = async () => {
     try {
-      await client.signup(user);
+      await client.signup(credentials);
       navigate("/Kanbas/Account/Profile");
     } catch (err: any) {
       setError(err.response.data.message);
     }
   };
   return (
-    <div>
-      <h1>Signup</h1>
+  <div className="container mt-5"> 
+  <div className="row justify-content-center"> 
+    <div className="col-md-6">
+      <h1 className="mb-3 text-center">Signup</h1> 
       {error && <div>{error}</div>}
-      <input value={user.username} onChange={(e) => setUser({
-          ...user, username: e.target.value })} />
-      <input value={user.password} onChange={(e) => setUser({
-          ...user, password: e.target.value })} />
-      <button onClick={signup}> Signup </button>
+      <form>
+        <div className="mb-3"> 
+          <input 
+            type="text" 
+            className="form-control" 
+            placeholder="Username" 
+            value={credentials.username} 
+            onChange={(e) => setCredentials({ ...credentials, username: e.target.value })}
+          />
+        </div>
+        <div className="mb-3">
+          <input 
+            type="password" 
+            className="form-control" 
+            placeholder="Password" 
+            value={credentials.password} 
+            onChange={(e) => setCredentials({ ...credentials, password: e.target.value })}
+          />
+        </div>
+        <div className="d-grid gap-2"> 
+          <button 
+            className="btn btn-primary" 
+            type="button" 
+            onClick={signup}
+          >
+            Sign Up
+          </button>
+        </div>
+      </form>
     </div>
+  </div>
+</div>
   );
 }

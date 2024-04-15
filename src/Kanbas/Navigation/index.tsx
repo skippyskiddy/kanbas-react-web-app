@@ -7,9 +7,10 @@ import { FaUser, FaTachometerAlt, FaBook, FaCalendar, FaEnvelope, FaHistory, FaP
 
 const KanbasNavigation = () => {
     const location = useLocation();
-  
+
+
     const links = [
-    { to: "/Kanbas/Account", icon: <FaUser style={{ color: 'white' }}  />, text: "Account" },
+    { to: "/Kanbas/Account", icon: <FaUser />, text: "Account" },
     { to: "/Kanbas/Dashboard", icon: <FaTachometerAlt />, text: "Dashboard" },
     { to: "/Kanbas/Courses", icon: <FaBook />, text: "Courses" },
     { to: "/Kanbas/Calendar", icon: <FaCalendar />, text: "Calendar" },
@@ -30,7 +31,8 @@ const KanbasNavigation = () => {
           {links.map((link, index) => (
             <li key={index} className={`nav-item ${location.pathname.startsWith(link.to) ? 'wd-active' : ''}`}>
               <Link className="nav-link" to={link.to}>
-                {link.icon} {link.text}
+                {link.to === "/Kanbas/Account" ? <FaUser style={{ color: location.pathname.startsWith(link.to) ? 'grey' : 'white' }} /> : link.icon}
+                {link.text}
               </Link>
             </li>
           ))}
