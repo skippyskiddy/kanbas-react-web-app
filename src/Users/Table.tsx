@@ -51,9 +51,13 @@ export default function UserTable() {
 
   const [role, setRole] = useState("USER");
   const fetchUsersByRole = async (role: string) => {
-    const users = await client.findUsersByRole(role);
-    setRole(role);
-    setUsers(users);
+    if (role === "User") {
+      fetchUsers();
+    } else {
+      const users = await client.findUsersByRole(role);
+      setRole(role);
+      setUsers(users);
+    }
   };
 
 
