@@ -3,13 +3,18 @@ import { useNavigate } from "react-router-dom";
 import { User } from "./client";
 import * as client from "./client";
 export default function Signin() {
+  const [error, setError] = useState("");
   const [credentials, setCredentials] = useState<User>({ _id: "",
     username: "", password: "", firstName: "", lastName: "", role: "USER"
   });
   const navigate = useNavigate();
   const signin = async () => {
-    await client.signin(credentials);
-    navigate("/Kanbas/Account/Profile");
+    try {
+      await client.signin(credentials);
+      navigate("/Kanbas/Account/Profile");
+    } catch(err: any) {
+      setError(err.response.data.message);
+    }
   };
   return (
 
@@ -17,6 +22,7 @@ export default function Signin() {
   <div className="row justify-content-center"> 
     <div className="col-md-6">
       <h1 className="mb-3 text-center">Signin</h1> 
+      {error && <div>{error}</div>}
       <form>
         <div className="mb-3"> 
           <input 
