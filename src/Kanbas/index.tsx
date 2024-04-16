@@ -84,7 +84,7 @@ function Kanbas() {
       `${COURSES_API}/${course._id}`,
       course
     );
-    setCourses(courses.map(c => c._id === course._id ? course : c));
+    await findAllCourses();
     resetForm();
     return course; 
     }; 
